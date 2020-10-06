@@ -1,0 +1,20 @@
+PODS:
+  - Reveal-24 (1.1.0)
+  - SwiftLint (0.40.0)
+
+DEPENDENCIES:
+  - Reveal-24
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Reveal-24
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Reveal-24: 73356148517878209f1b6d7c735f303abe218ebe
+  SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
+
+PODFILE CHECKSUM: 25991742eb1cef6bcaa92dfd1208676434dcbcc4
+
+COCOAPODS: 1.9.3

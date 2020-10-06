@@ -1,0 +1,15 @@
+//
+//  Localizable.strings
+//  AlarStudiosTestProjectApp
+//
+//  Created by Roman Suvorov on 06.10.2020.
+//
+
+"error.generic-title"="An unknown error occured";
+"error.generic-message"="Something went wrong";
+"error.generic-retry-message"="Something went wrong, please retry";
+
+"error.incorrect-response-title"="Incorrect Server Response";
+"error.incorrect-respinse-message"="Server returned something weird, not an expected data";
+
+"warning.search.no-results-found"="No results has been found";

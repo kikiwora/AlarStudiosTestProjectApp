@@ -3,18 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1E544EAF252C72E600EA0BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544EAE252C72E600EA0BC1 /* AppDelegate.swift */; };
-		1E544EB1252C72E600EA0BC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544EB0252C72E600EA0BC1 /* SceneDelegate.swift */; };
 		1E544EB3252C72E600EA0BC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544EB2252C72E600EA0BC1 /* ViewController.swift */; };
 		1E544EB6252C72E600EA0BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E544EB4252C72E600EA0BC1 /* Main.storyboard */; };
 		1E544EB8252C72E900EA0BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E544EB7252C72E900EA0BC1 /* Assets.xcassets */; };
 		1E544EBB252C72E900EA0BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E544EB9252C72E900EA0BC1 /* LaunchScreen.storyboard */; };
-		1E544EC6252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544EC5252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests.swift */; };
-		1E544ED1252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544ED0252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests.swift */; };
+		1E544EC6252C72EA00EA0BC1 /* TestProjectAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544EC5252C72EA00EA0BC1 /* TestProjectAppTests.swift */; };
+		1E544ED1252C72EA00EA0BC1 /* TestProjectAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544ED0252C72EA00EA0BC1 /* TestProjectAppUITests.swift */; };
+		1E544F05252C766A00EA0BC1 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544F01252C766900EA0BC1 /* Storyboards.swift */; };
+		1E544F06252C766A00EA0BC1 /* XIBLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544F02252C766900EA0BC1 /* XIBLocalizable.swift */; };
+		1E544F07252C766A00EA0BC1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544F03252C766900EA0BC1 /* Strings.swift */; };
+		1E544F08252C766A00EA0BC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E544F04252C766A00EA0BC1 /* Localizable.strings */; };
+		21B9929C03D3359F99A6C6CB /* Pods_AlarStudiosTestProjectAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713096EF7575CFCE1BA5FBA2 /* Pods_AlarStudiosTestProjectAppTests.framework */; };
+		E709C5916BB46F80DF906E7C /* libPods-AlarStudiosTestProjectApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A48BF0E8067E757EA309DD0 /* libPods-AlarStudiosTestProjectApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +40,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1E544EAB252C72E600EA0BC1 /* AlarStudiosTestProjectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlarStudiosTestProjectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E544EAB252C72E600EA0BC1 /* TestProjectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProjectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E544EAE252C72E600EA0BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E544EB0252C72E600EA0BC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1E544EB2252C72E600EA0BC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E544EB5252C72E600EA0BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E544EB7252C72E900EA0BC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E544EBA252C72E900EA0BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E544EBC252C72E900EA0BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E544EC1252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarStudiosTestProjectAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E544EC5252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarStudiosTestProjectAppTests.swift; sourceTree = "<group>"; };
+		1E544EC1252C72EA00EA0BC1 /* TestProjectApp Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TestProjectApp Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E544EC5252C72EA00EA0BC1 /* TestProjectAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectAppTests.swift; sourceTree = "<group>"; };
 		1E544EC7252C72EA00EA0BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E544ECC252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlarStudiosTestProjectAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E544ED0252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarStudiosTestProjectAppUITests.swift; sourceTree = "<group>"; };
+		1E544ECC252C72EA00EA0BC1 /* TestProjectApp UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TestProjectApp UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E544ED0252C72EA00EA0BC1 /* TestProjectAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectAppUITests.swift; sourceTree = "<group>"; };
 		1E544ED2252C72EA00EA0BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E544F01252C766900EA0BC1 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		1E544F02252C766900EA0BC1 /* XIBLocalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIBLocalizable.swift; sourceTree = "<group>"; };
+		1E544F03252C766900EA0BC1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		1E544F04252C766A00EA0BC1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		21439E5FB8B5B0A625E5FB33 /* Pods-AlarStudiosTestProjectApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarStudiosTestProjectApp.release.xcconfig"; path = "Target Support Files/Pods-AlarStudiosTestProjectApp/Pods-AlarStudiosTestProjectApp.release.xcconfig"; sourceTree = "<group>"; };
+		2BA8E53A6555A9B5EE681301 /* Pods-AlarStudiosTestProjectAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarStudiosTestProjectAppTests.debug.xcconfig"; path = "Target Support Files/Pods-AlarStudiosTestProjectAppTests/Pods-AlarStudiosTestProjectAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51C7EC51D50311890D3649F0 /* Pods-AlarStudiosTestProjectApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarStudiosTestProjectApp.debug.xcconfig"; path = "Target Support Files/Pods-AlarStudiosTestProjectApp/Pods-AlarStudiosTestProjectApp.debug.xcconfig"; sourceTree = "<group>"; };
+		713096EF7575CFCE1BA5FBA2 /* Pods_AlarStudiosTestProjectAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlarStudiosTestProjectAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A48BF0E8067E757EA309DD0 /* libPods-AlarStudiosTestProjectApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlarStudiosTestProjectApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F270C3EDF5083E1D9E14474 /* Pods-AlarStudiosTestProjectAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarStudiosTestProjectAppTests.release.xcconfig"; path = "Target Support Files/Pods-AlarStudiosTestProjectAppTests/Pods-AlarStudiosTestProjectAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E709C5916BB46F80DF906E7C /* libPods-AlarStudiosTestProjectApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21B9929C03D3359F99A6C6CB /* Pods_AlarStudiosTestProjectAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,79 +95,197 @@
 		1E544EA2252C72E600EA0BC1 = {
 			isa = PBXGroup;
 			children = (
-				1E544EAD252C72E600EA0BC1 /* AlarStudiosTestProjectApp */,
-				1E544EC4252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests */,
-				1E544ECF252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests */,
+				1E544EAD252C72E600EA0BC1 /* TestProjectApp */,
+				1E544F16252C78AB00EA0BC1 /* Tests */,
 				1E544EAC252C72E600EA0BC1 /* Products */,
+				25AAA7DF29772790208267C1 /* Pods */,
+				851C15939B47F1E70F9ACD42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		1E544EAC252C72E600EA0BC1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E544EAB252C72E600EA0BC1 /* AlarStudiosTestProjectApp.app */,
-				1E544EC1252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests.xctest */,
-				1E544ECC252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests.xctest */,
+				1E544EAB252C72E600EA0BC1 /* TestProjectApp.app */,
+				1E544EC1252C72EA00EA0BC1 /* TestProjectApp Tests.xctest */,
+				1E544ECC252C72EA00EA0BC1 /* TestProjectApp UI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1E544EAD252C72E600EA0BC1 /* AlarStudiosTestProjectApp */ = {
+		1E544EAD252C72E600EA0BC1 /* TestProjectApp */ = {
 			isa = PBXGroup;
 			children = (
+				1E544EEA252C743C00EA0BC1 /* App */,
+				1E544EEB252C744000EA0BC1 /* Resources */,
+				1E544EEC252C745300EA0BC1 /* Views */,
+				1E71E1A5252C7C8D000DA792 /* Services */,
+			);
+			path = TestProjectApp;
+			sourceTree = "<group>";
+		};
+		1E544EC4252C72EA00EA0BC1 /* TestProjectApp Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1E544EC7252C72EA00EA0BC1 /* Info.plist */,
+				1E544EF1252C749400EA0BC1 /* Tests */,
+			);
+			path = "TestProjectApp Tests";
+			sourceTree = "<group>";
+		};
+		1E544ECF252C72EA00EA0BC1 /* TestProjectApp UI Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1E544ED2252C72EA00EA0BC1 /* Info.plist */,
+				1E544EF0252C748F00EA0BC1 /* Tests */,
+			);
+			path = "TestProjectApp UI Tests";
+			sourceTree = "<group>";
+		};
+		1E544EEA252C743C00EA0BC1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1E544EBC252C72E900EA0BC1 /* Info.plist */,
 				1E544EAE252C72E600EA0BC1 /* AppDelegate.swift */,
-				1E544EB0252C72E600EA0BC1 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1E544EEB252C744000EA0BC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1E544EB7252C72E900EA0BC1 /* Assets.xcassets */,
+				1E544F04252C766A00EA0BC1 /* Localizable.strings */,
+				1E544F01252C766900EA0BC1 /* Storyboards.swift */,
+				1E544F03252C766900EA0BC1 /* Strings.swift */,
+				1E544F02252C766900EA0BC1 /* XIBLocalizable.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1E544EEC252C745300EA0BC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E544EED252C746600EA0BC1 /* Login */,
+				1E544EEE252C746B00EA0BC1 /* ElementList */,
+				1E544EEF252C747100EA0BC1 /* ElementDetail */,
 				1E544EB2252C72E600EA0BC1 /* ViewController.swift */,
 				1E544EB4252C72E600EA0BC1 /* Main.storyboard */,
-				1E544EB7252C72E900EA0BC1 /* Assets.xcassets */,
 				1E544EB9252C72E900EA0BC1 /* LaunchScreen.storyboard */,
-				1E544EBC252C72E900EA0BC1 /* Info.plist */,
 			);
-			path = AlarStudiosTestProjectApp;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		1E544EC4252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests */ = {
+		1E544EED252C746600EA0BC1 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				1E544EC5252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests.swift */,
-				1E544EC7252C72EA00EA0BC1 /* Info.plist */,
 			);
-			path = AlarStudiosTestProjectAppTests;
+			path = Login;
 			sourceTree = "<group>";
 		};
-		1E544ECF252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests */ = {
+		1E544EEE252C746B00EA0BC1 /* ElementList */ = {
 			isa = PBXGroup;
 			children = (
-				1E544ED0252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests.swift */,
-				1E544ED2252C72EA00EA0BC1 /* Info.plist */,
 			);
-			path = AlarStudiosTestProjectAppUITests;
+			path = ElementList;
+			sourceTree = "<group>";
+		};
+		1E544EEF252C747100EA0BC1 /* ElementDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ElementDetail;
+			sourceTree = "<group>";
+		};
+		1E544EF0252C748F00EA0BC1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1E544ED0252C72EA00EA0BC1 /* TestProjectAppUITests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		1E544EF1252C749400EA0BC1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1E544EC5252C72EA00EA0BC1 /* TestProjectAppTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		1E544F16252C78AB00EA0BC1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1E544EC4252C72EA00EA0BC1 /* TestProjectApp Tests */,
+				1E544ECF252C72EA00EA0BC1 /* TestProjectApp UI Tests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		1E71E1A5252C7C8D000DA792 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1E71E1A6252C7CA2000DA792 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1E71E1A6252C7CA2000DA792 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		25AAA7DF29772790208267C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51C7EC51D50311890D3649F0 /* Pods-AlarStudiosTestProjectApp.debug.xcconfig */,
+				21439E5FB8B5B0A625E5FB33 /* Pods-AlarStudiosTestProjectApp.release.xcconfig */,
+				2BA8E53A6555A9B5EE681301 /* Pods-AlarStudiosTestProjectAppTests.debug.xcconfig */,
+				9F270C3EDF5083E1D9E14474 /* Pods-AlarStudiosTestProjectAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		851C15939B47F1E70F9ACD42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A48BF0E8067E757EA309DD0 /* libPods-AlarStudiosTestProjectApp.a */,
+				713096EF7575CFCE1BA5FBA2 /* Pods_AlarStudiosTestProjectAppTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1E544EAA252C72E600EA0BC1 /* AlarStudiosTestProjectApp */ = {
+		1E544EAA252C72E600EA0BC1 /* TestProjectApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E544ED5252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "AlarStudiosTestProjectApp" */;
+			buildConfigurationList = 1E544ED5252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "TestProjectApp" */;
 			buildPhases = (
+				95F5228CC2E937F812FB9A00 /* [CP] Check Pods Manifest.lock */,
+				1E544EE3252C730300EA0BC1 /* Swiftlint */,
+				1E544F00252C75C800EA0BC1 /* Codegen */,
 				1E544EA7252C72E600EA0BC1 /* Sources */,
 				1E544EA8252C72E600EA0BC1 /* Frameworks */,
 				1E544EA9252C72E600EA0BC1 /* Resources */,
+				3181837C48945699F560C1CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AlarStudiosTestProjectApp;
+			name = TestProjectApp;
 			productName = AlarStudiosTestProjectApp;
-			productReference = 1E544EAB252C72E600EA0BC1 /* AlarStudiosTestProjectApp.app */;
+			productReference = 1E544EAB252C72E600EA0BC1 /* TestProjectApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1E544EC0252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests */ = {
+		1E544EC0252C72EA00EA0BC1 /* TestProjectApp Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E544ED8252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "AlarStudiosTestProjectAppTests" */;
+			buildConfigurationList = 1E544ED8252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "TestProjectApp Tests" */;
 			buildPhases = (
+				B5AD1CC551E26908EEEE7BAA /* [CP] Check Pods Manifest.lock */,
 				1E544EBD252C72EA00EA0BC1 /* Sources */,
 				1E544EBE252C72EA00EA0BC1 /* Frameworks */,
 				1E544EBF252C72EA00EA0BC1 /* Resources */,
@@ -161,14 +295,14 @@
 			dependencies = (
 				1E544EC3252C72EA00EA0BC1 /* PBXTargetDependency */,
 			);
-			name = AlarStudiosTestProjectAppTests;
+			name = "TestProjectApp Tests";
 			productName = AlarStudiosTestProjectAppTests;
-			productReference = 1E544EC1252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests.xctest */;
+			productReference = 1E544EC1252C72EA00EA0BC1 /* TestProjectApp Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1E544ECB252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests */ = {
+		1E544ECB252C72EA00EA0BC1 /* TestProjectApp UI Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E544EDB252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "AlarStudiosTestProjectAppUITests" */;
+			buildConfigurationList = 1E544EDB252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "TestProjectApp UI Tests" */;
 			buildPhases = (
 				1E544EC8252C72EA00EA0BC1 /* Sources */,
 				1E544EC9252C72EA00EA0BC1 /* Frameworks */,
@@ -179,9 +313,9 @@
 			dependencies = (
 				1E544ECE252C72EA00EA0BC1 /* PBXTargetDependency */,
 			);
-			name = AlarStudiosTestProjectAppUITests;
+			name = "TestProjectApp UI Tests";
 			productName = AlarStudiosTestProjectAppUITests;
-			productReference = 1E544ECC252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests.xctest */;
+			productReference = 1E544ECC252C72EA00EA0BC1 /* TestProjectApp UI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -219,9 +353,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E544EAA252C72E600EA0BC1 /* AlarStudiosTestProjectApp */,
-				1E544EC0252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests */,
-				1E544ECB252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests */,
+				1E544EAA252C72E600EA0BC1 /* TestProjectApp */,
+				1E544EC0252C72EA00EA0BC1 /* TestProjectApp Tests */,
+				1E544ECB252C72EA00EA0BC1 /* TestProjectApp UI Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E544EBB252C72E900EA0BC1 /* LaunchScreen.storyboard in Resources */,
+				1E544F08252C766A00EA0BC1 /* Localizable.strings in Resources */,
 				1E544EB8252C72E900EA0BC1 /* Assets.xcassets in Resources */,
 				1E544EB6252C72E600EA0BC1 /* Main.storyboard in Resources */,
 			);
@@ -253,14 +388,116 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E544EE3252C730300EA0BC1 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    git diff --name-only --diff-filter=d | egrep '\\.swift' | while read filename; do\n        swiftlint autocorrect --path \"$filename\"\n    done\n    \n    git diff --cached --name-only --diff-filter=d | egrep '\\.swift' | while read filename; do \n        swiftlint autocorrect --path \"$filename\"\n    done\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		1E544F00252C75C800EA0BC1 /* Codegen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Codegen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PROJECT_DIR_GUARDED=$(printf %q \"$PROJECT_DIR\")\neval $PROJECT_DIR_GUARDED/scripts/code_gen.sh $PROJECT_DIR_GUARDED\n";
+		};
+		3181837C48945699F560C1CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlarStudiosTestProjectApp/Pods-AlarStudiosTestProjectApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlarStudiosTestProjectApp/Pods-AlarStudiosTestProjectApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlarStudiosTestProjectApp/Pods-AlarStudiosTestProjectApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95F5228CC2E937F812FB9A00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlarStudiosTestProjectApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5AD1CC551E26908EEEE7BAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlarStudiosTestProjectAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1E544EA7252C72E600EA0BC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E544F06252C766A00EA0BC1 /* XIBLocalizable.swift in Sources */,
+				1E544F05252C766A00EA0BC1 /* Storyboards.swift in Sources */,
+				1E544F07252C766A00EA0BC1 /* Strings.swift in Sources */,
 				1E544EB3252C72E600EA0BC1 /* ViewController.swift in Sources */,
 				1E544EAF252C72E600EA0BC1 /* AppDelegate.swift in Sources */,
-				1E544EB1252C72E600EA0BC1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E544EC6252C72EA00EA0BC1 /* AlarStudiosTestProjectAppTests.swift in Sources */,
+				1E544EC6252C72EA00EA0BC1 /* TestProjectAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E544ED1252C72EA00EA0BC1 /* AlarStudiosTestProjectAppUITests.swift in Sources */,
+				1E544ED1252C72EA00EA0BC1 /* TestProjectAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,12 +522,12 @@
 /* Begin PBXTargetDependency section */
 		1E544EC3252C72EA00EA0BC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1E544EAA252C72E600EA0BC1 /* AlarStudiosTestProjectApp */;
+			target = 1E544EAA252C72E600EA0BC1 /* TestProjectApp */;
 			targetProxy = 1E544EC2252C72EA00EA0BC1 /* PBXContainerItemProxy */;
 		};
 		1E544ECE252C72EA00EA0BC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1E544EAA252C72E600EA0BC1 /* AlarStudiosTestProjectApp */;
+			target = 1E544EAA252C72E600EA0BC1 /* TestProjectApp */;
 			targetProxy = 1E544ECD252C72EA00EA0BC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -433,12 +670,14 @@
 		};
 		1E544ED6252C72EA00EA0BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C7EC51D50311890D3649F0 /* Pods-AlarStudiosTestProjectApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U86R6SS748;
-				INFOPLIST_FILE = AlarStudiosTestProjectApp/Info.plist;
+				INFOPLIST_FILE = TestProjectApp/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,18 +685,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kikiwora.AlarStudiosTestProjectApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1E544ED7252C72EA00EA0BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21439E5FB8B5B0A625E5FB33 /* Pods-AlarStudiosTestProjectApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U86R6SS748;
-				INFOPLIST_FILE = AlarStudiosTestProjectApp/Info.plist;
+				INFOPLIST_FILE = TestProjectApp/App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,18 +706,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kikiwora.AlarStudiosTestProjectApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		1E544ED9252C72EA00EA0BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BA8E53A6555A9B5EE681301 /* Pods-AlarStudiosTestProjectAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U86R6SS748;
-				INFOPLIST_FILE = AlarStudiosTestProjectAppTests/Info.plist;
+				INFOPLIST_FILE = "Tests/TestProjectApp Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,19 +728,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kikiwora.AlarStudiosTestProjectAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlarStudiosTestProjectApp.app/AlarStudiosTestProjectApp";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestProjectApp.app/TestProjectApp";
 			};
 			name = Debug;
 		};
 		1E544EDA252C72EA00EA0BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F270C3EDF5083E1D9E14474 /* Pods-AlarStudiosTestProjectAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U86R6SS748;
-				INFOPLIST_FILE = AlarStudiosTestProjectAppTests/Info.plist;
+				INFOPLIST_FILE = "Tests/TestProjectApp Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,8 +751,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kikiwora.AlarStudiosTestProjectAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlarStudiosTestProjectApp.app/AlarStudiosTestProjectApp";
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestProjectApp.app/TestProjectApp";
 			};
 			name = Release;
 		};
@@ -519,7 +762,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U86R6SS748;
-				INFOPLIST_FILE = AlarStudiosTestProjectAppUITests/Info.plist;
+				INFOPLIST_FILE = "Tests/TestProjectApp UI Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,8 +771,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kikiwora.AlarStudiosTestProjectAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AlarStudiosTestProjectApp;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = TestProjectApp;
 			};
 			name = Debug;
 		};
@@ -539,7 +782,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U86R6SS748;
-				INFOPLIST_FILE = AlarStudiosTestProjectAppUITests/Info.plist;
+				INFOPLIST_FILE = "Tests/TestProjectApp UI Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,8 +791,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kikiwora.AlarStudiosTestProjectAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AlarStudiosTestProjectApp;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = TestProjectApp;
 			};
 			name = Release;
 		};
@@ -565,7 +808,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E544ED5252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "AlarStudiosTestProjectApp" */ = {
+		1E544ED5252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "TestProjectApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E544ED6252C72EA00EA0BC1 /* Debug */,
@@ -574,7 +817,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E544ED8252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "AlarStudiosTestProjectAppTests" */ = {
+		1E544ED8252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "TestProjectApp Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E544ED9252C72EA00EA0BC1 /* Debug */,
@@ -583,7 +826,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E544EDB252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "AlarStudiosTestProjectAppUITests" */ = {
+		1E544EDB252C72EA00EA0BC1 /* Build configuration list for PBXNativeTarget "TestProjectApp UI Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E544EDC252C72EA00EA0BC1 /* Debug */,

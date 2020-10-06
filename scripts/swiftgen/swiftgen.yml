@@ -1,0 +1,8 @@
+strings:
+  inputs: ../../../Velocigene/Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift4
+      output:  ../../../Velocigene/Resources/Strings.swift
+      params:
+        publicAccess: true
+  
