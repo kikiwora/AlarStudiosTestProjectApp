@@ -40,8 +40,17 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>protocol</key>
+	<string>https</string>
+	<key>server_url</key>
+	<string>www.alarstudios.com</string>
+	<key>timeout_interval</key>
+	<string>60</string>
 </dict>
 </plist>
