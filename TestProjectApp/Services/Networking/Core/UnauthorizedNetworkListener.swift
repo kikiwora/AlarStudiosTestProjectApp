@@ -8,7 +8,7 @@
 import Network
 import Foundation
 
-final class GenericNetworkListener: NetworkListener {
+final class UnauthorizedNetworkListener: NetworkListener {
     private let unauthorizedHandler: () -> Void
 
     init(handler: @escaping () -> Void) {
@@ -24,8 +24,7 @@ final class GenericNetworkListener: NetworkListener {
                     unauthorizedHandler()
                 }
 
-            case .failure(let error):
-                EventLogger.log("error reading JSON: \(error)")
+            default: return
         }
     }
 }

@@ -14,7 +14,7 @@ enum NetworkServiceFactory {
     }
 
     private static func makeListeners() -> [NetworkListener] {
-        let listener = GenericNetworkListener(handler: {
+        let listener = UnauthorizedNetworkListener(handler: {
             NotificationCenterEvents.userActionUnauthorized()
         })
         return [listener]

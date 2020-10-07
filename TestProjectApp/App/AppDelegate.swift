@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(response)
 
             if case .success(let loginResult) = response {
-                if loginResult.isUnauthorized() { return }
+                if !loginResult.isOK() { return }
 
                 sessionManager?.code = loginResult.code
 
