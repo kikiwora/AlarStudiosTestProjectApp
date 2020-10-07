@@ -25,6 +25,15 @@ internal enum L10n {
     internal static let incorrectResponseTitle = L10n.tr("Localizable", "error.incorrect-response-title")
   }
 
+  internal enum Login {
+    /// Login
+    internal static let loginTitle = L10n.tr("Localizable", "login.login-title")
+    /// Password
+    internal static let passwordPlaceholder = L10n.tr("Localizable", "login.password-placeholder")
+    /// Username
+    internal static let usernamePlaceholder = L10n.tr("Localizable", "login.username-placeholder")
+  }
+
   internal enum Warning {
     internal enum Search {
       /// No results has been found

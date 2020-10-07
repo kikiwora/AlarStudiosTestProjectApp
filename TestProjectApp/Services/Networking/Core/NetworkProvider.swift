@@ -23,7 +23,7 @@ protocol NetworkListener {
 }
 
 class NetworkProvider<Target: TargetType>: NetworkProviderType {
-    private let sessionManager: SessionManager
+    let sessionManager: SessionManager
     private let listeners: [NetworkListener]
 
     init(listeners: [NetworkListener] = [], sessionManager: SessionManager) {
@@ -39,11 +39,14 @@ class NetworkProvider<Target: TargetType>: NetworkProviderType {
         let request = NSMutableURLRequest(url: endpoint.url)
         request.timeoutInterval = Environment().timeoutInterval
         request.httpMethod = endpoint.httpMethod.rawValue
-
+        
         let task = URLSession.shared.dataTask(with: request as URLRequest) { [listeners] data, response, error in
             let tuple = (data, response, error)
             listeners.didReceive(tuple)
-            completion(tuple)
+
+            DispatchQueue.main.async {
+                completion(tuple)
+            }
         }
 
         task.resume()

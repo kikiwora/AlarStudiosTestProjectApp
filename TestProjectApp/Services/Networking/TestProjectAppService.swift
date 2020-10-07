@@ -18,9 +18,18 @@ class TestProjectAppService: TestProjectAppNetworkServiceType {
 // MARK: - ServiceType methods
 
 protocol TestProjectAppNetworkServiceType {
-    
+    var sessionManager: SessionManager { get }
+
     func login(username: String, password: String, completion: @escaping (Result<LoginResponse>) -> Void)
     func fetchData(page: Int, completion: @escaping (Result<DataResponse>) -> Void)
+}
+
+extension TestProjectAppService {
+    var sessionManager: SessionManager {
+        get {
+            return networkProvider.sessionManager
+        }
+    }
 }
 
 extension TestProjectAppService {
@@ -33,7 +42,7 @@ extension TestProjectAppService {
             if let responseStatus = tuple.data?.decoded(LoginResponse.self) {
                 completion(responseStatus)
             } else {
-                completion(.failure(PresentableError.generic))
+                completion(.failure(PresentableError.incorrectResponse))
             }
         }
     }
@@ -45,7 +54,7 @@ extension TestProjectAppService {
             if let responseStatus = tuple.data?.decoded(DataResponse.self) {
                 completion(responseStatus)
             } else {
-                completion(.failure(PresentableError.generic))
+                completion(.failure(PresentableError.incorrectResponse))
             }
         }
     }

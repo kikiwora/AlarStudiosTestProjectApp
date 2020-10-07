@@ -5,6 +5,10 @@
 //  Created by Roman Suvorov on 06.10.2020.
 //
 
+"login.login-title"="Login";
+"login.username-placeholder"="Username";
+"login.password-placeholder"="Password";
+
 "error.generic-title"="An unknown error occured";
 "error.generic-message"="Something went wrong";
 "error.generic-retry-message"="Something went wrong, please retry";

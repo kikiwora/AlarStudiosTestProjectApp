@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oii-qX-XI8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="M7S-AL-ECR">
+            <objects>
+                <viewController storyboardIdentifier="LoginView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b9w-Qb-V88" customClass="LoginViewController" customModule="TestProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X49-HS-lrR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bt4-2Q-5ad">
+                                <rect key="frame" x="20" y="254" width="374" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="300" id="iRo-Hk-KUY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="isI-ED-SNc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bt4-2Q-5ad" firstAttribute="top" relation="greaterThanOrEqual" secondItem="isI-ED-SNc" secondAttribute="top" constant="20" id="5Wp-k4-unc"/>
+                            <constraint firstItem="isI-ED-SNc" firstAttribute="trailing" secondItem="bt4-2Q-5ad" secondAttribute="trailing" constant="20" id="7el-ic-iR9"/>
+                            <constraint firstItem="bt4-2Q-5ad" firstAttribute="centerY" secondItem="isI-ED-SNc" secondAttribute="centerY" id="Le7-Ip-jNn"/>
+                            <constraint firstItem="isI-ED-SNc" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bt4-2Q-5ad" secondAttribute="bottom" constant="20" id="N27-g5-5xL"/>
+                            <constraint firstItem="bt4-2Q-5ad" firstAttribute="centerX" secondItem="isI-ED-SNc" secondAttribute="centerX" id="cIB-GJ-2cC"/>
+                            <constraint firstItem="bt4-2Q-5ad" firstAttribute="leading" secondItem="isI-ED-SNc" secondAttribute="leading" constant="20" id="srY-Lu-QSj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gdE-Wi-etx"/>
+                    <connections>
+                        <outlet property="loginFormViewContainer" destination="bt4-2Q-5ad" id="i4f-hJ-jtl"/>
+                        <segue destination="oI8-n1-QwP" kind="unwind" identifier="returnToContentView" unwindAction="unwindToContentViewWithSegue:" id="xfX-KN-WSx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rrq-gS-j8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="oI8-n1-QwP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1155.072463768116" y="-281.25"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="rfc-lY-yK8">
+            <objects>
+                <viewController storyboardIdentifier="ContentView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KL6-XU-3gc" customClass="ContentViewController" customModule="TestProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fpn-yU-jpa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pAs-1D-NJr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mf6-3y-c8N"/>
+                    <connections>
+                        <segue destination="b9w-Qb-V88" kind="presentation" identifier="showLogin" destinationCreationSelector="showLoginSegue" id="a3m-pu-icY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKY-yv-xuK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310.14492753623193" y="-281.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zRT-5w-Hrh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Oii-qX-XI8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Quh-ZL-qgS">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KL6-XU-3gc" kind="relationship" relationship="rootViewController" id="Qg2-jH-4Yu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJb-of-3RF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-600" y="-281.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

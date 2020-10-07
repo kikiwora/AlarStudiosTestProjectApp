@@ -14,13 +14,18 @@ final class SessionManager {
         get {
             return _code
         }
-        set {
-            _code = newValue
-        }
     }
 
     func clearSession() {
         _code = nil
+    }
+
+    func saveSession(with code: String) {
+        _code = code
+    }
+
+    func isUserAuthorized() -> Bool {
+        return (_code != nil) && _code?.isEmpty == false
     }
 }
 
