@@ -10,14 +10,14 @@ import Foundation
 // MARK: - View IO
 
 protocol LoginViewType: ViewType {
-    func loginFailed()
+    func loginFailed(_ error: Error)
     func loginSucceded()
     func returnToParent()
 }
 
 protocol ContentViewType: ViewType {
     func authorizationFinished()
-    func dataLoaded()
+    func renderData()
     func showLoginForm()
 }
 

@@ -36,11 +36,13 @@ extension LoginFormView: NibLoadable { }
 
 // MARK: - LoginForm ViewModel
 
-struct LoginFormViewModel {
-    let loginState: LoginState = .unattempted
+extension LoginFormView {
+    struct ViewModel {
+        let loginState: LoginState
+    }
 }
 
-extension LoginFormViewModel {
+extension LoginFormView.ViewModel {
     enum LoginState {
         case success
         case failure
@@ -49,9 +51,17 @@ extension LoginFormViewModel {
 }
 
 extension LoginFormView {
-    func render(_ viewModel: LoginFormViewModel = LoginFormViewModel()) {
+    func render(_ viewModel: ViewModel) {
         if viewModel.loginState == .failure {
             // TODO
+        }
+    }
+}
+
+extension LoginFormView.ViewModel {
+    enum Factory {
+        static func make(_ state: LoginState = .unattempted) -> LoginFormView.ViewModel {
+            return .init(loginState: state)
         }
     }
 }

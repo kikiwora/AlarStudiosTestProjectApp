@@ -20,26 +20,33 @@ class LoginFlowPresenter {
 
 extension LoginFlowPresenter: LoginFlowPresenterType {
     func processLoginResponse(_ response: Result<LoginResponse>) {
-        if case .success(let loginResult) = response {
-            if !loginResult.isOK() {
-                interactor.clearUserSession()
-                return
-            }
 
-            interactor.saveUserSession(loginResult.code)
+        switch response {
+            case .success(let loginResult):
+                if !loginResult.isOK() {
+                    interactor.clearUserSession()
+                    return
+                }
+                interactor.saveUserSession(loginResult.code)
+                onLoginFinished()
 
-            onLoginFinished()
+            case .failure(let error):
+                onLoginFailed(error)
         }
     }
 
     func dataLoaded(_ response: Result<DataResponse>) {
-        contentView.dataLoaded()
+        contentView.renderData()
     }
 
     private func onLoginFinished() {
         loginView.loginSucceded()
         loginView.returnToParent()
         contentView.authorizationFinished()
+    }
+
+    private func onLoginFailed(_ error: Error) {
+        loginView.loginFailed(error)
     }
 }
 

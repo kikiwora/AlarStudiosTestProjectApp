@@ -8,7 +8,7 @@
 import Foundation
 
 final class SessionManager {
-    private var _code: String?
+    private var _code: String?  // This should be in persistant storage
 
     var code: String? {
         get {

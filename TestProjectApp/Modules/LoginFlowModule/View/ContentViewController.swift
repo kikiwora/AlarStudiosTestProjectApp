@@ -30,7 +30,7 @@ extension ContentViewController: ContentViewType {
         checkUserAuthorization()
     }
 
-    func dataLoaded() {
+    func renderData() {
         // TODO
     }
 

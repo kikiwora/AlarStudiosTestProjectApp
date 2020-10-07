@@ -31,25 +31,22 @@ class LoginViewController: UIViewController {
     }
 }
 
-// MARK: -
+// MARK: - Authorization Flow Methods
 
 extension LoginViewController: LoginViewType {
-    func loginFailed() {
-        // TODO: - Notify user here
-        print("Login failed")
-    }
 
     func loginSucceded() {
-        // TODO: - Notify user here
-        print("Login Succeded")
+        loginFormView.render(LoginFormView.ViewModel.Factory.make(.success))
+    }
+
+    func loginFailed(_ error: Error) {
+        loginFormView.render(LoginFormView.ViewModel.Factory.make(.failure))
     }
 
     func returnToParent() {
         self.performSegue(withIdentifier: Constants.returnToContentViewSegueIdentifier, sender: self)
     }
 }
-
-// MARK: - Authorization Flow Methods
 
 private extension LoginViewController {
 
