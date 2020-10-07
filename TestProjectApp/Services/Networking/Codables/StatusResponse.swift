@@ -8,5 +8,5 @@
 import Foundation
 
 struct StatusResponse: StatusRepresentable, Decodable {
-    private(set) var status: String
+    private(set) var status: RequestStatus
 }

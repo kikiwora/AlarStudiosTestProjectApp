@@ -8,7 +8,7 @@
 import Foundation
 
 struct DataResponse: StatusRepresentable, Decodable {
-    private(set) var status: String
+    private(set) var status: RequestStatus
     
     let page: Int
     let data: [DataElement]

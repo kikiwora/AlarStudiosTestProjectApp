@@ -8,7 +8,7 @@
 import Foundation
 
 struct LoginResponse: StatusRepresentable, Decodable {
-    private(set) var status: String
+    private(set) var status: RequestStatus
     
     let code: String
 }

@@ -8,15 +8,25 @@
 import Foundation
 
 protocol StatusRepresentable {
-    var status: String { get }  // TODO: This probably should be transformed to enum
+    var status: RequestStatus { get }
 }
 
 extension StatusRepresentable {
+    func isOK() -> Bool {
+        return status == .ok
+    }
+
     func isUnauthorized() -> Bool {
-        return status.uppercased() != "OK"
+        return status == .noSession
     }
 
     func hasAnError() -> Bool {
-        return status.uppercased() == "ERROR"
+        return status == .error
     }
+}
+
+enum RequestStatus: String, Decodable {
+    case ok = "ok"
+    case error = "error"
+    case noSession = "no session"
 }
