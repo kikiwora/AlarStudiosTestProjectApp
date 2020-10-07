@@ -52,6 +52,10 @@
 		1E7B23B8252E118C0028AE4A /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B23AB252E118B0028AE4A /* NibLoadable.swift */; };
 		1E7B23B9252E118C0028AE4A /* UIStoryboard+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B23AD252E118B0028AE4A /* UIStoryboard+Ext.swift */; };
 		1E7B23BA252E118C0028AE4A /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B23AF252E118C0028AE4A /* UIWindow+Ext.swift */; };
+		1E7B23D3252E266B0028AE4A /* LoginFlowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B23D2252E266B0028AE4A /* LoginFlowPresenter.swift */; };
+		1E7B23D8252E267B0028AE4A /* LoginFlowInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B23D7252E267B0028AE4A /* LoginFlowInteractor.swift */; };
+		1E7B23E3252E27A40028AE4A /* LoginFlowIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B23E2252E27A40028AE4A /* LoginFlowIO.swift */; };
+		1E7B23F6252E296F0028AE4A /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B23F5252E296F0028AE4A /* ViewType.swift */; };
 		1EF8CCD6252CB0E500A7AF19 /* NotificationCenterEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8CCD5252CB0E500A7AF19 /* NotificationCenterEvents.swift */; };
 		1EF8CCDB252CBE4100A7AF19 /* ApplicationSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF8CCDA252CBE4100A7AF19 /* ApplicationSetup.swift */; };
 		39C3C6C840D81178D2CE61D7 /* Pods_TestProjectApp_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE84D16FF7B986CC06EB74F /* Pods_TestProjectApp_Tests.framework */; };
@@ -130,6 +134,10 @@
 		1E7B23AB252E118B0028AE4A /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		1E7B23AD252E118B0028AE4A /* UIStoryboard+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Ext.swift"; sourceTree = "<group>"; };
 		1E7B23AF252E118C0028AE4A /* UIWindow+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Ext.swift"; sourceTree = "<group>"; };
+		1E7B23D2252E266B0028AE4A /* LoginFlowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowPresenter.swift; sourceTree = "<group>"; };
+		1E7B23D7252E267B0028AE4A /* LoginFlowInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowInteractor.swift; sourceTree = "<group>"; };
+		1E7B23E2252E27A40028AE4A /* LoginFlowIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowIO.swift; sourceTree = "<group>"; };
+		1E7B23F5252E296F0028AE4A /* ViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
 		1EF8CCD5252CB0E500A7AF19 /* NotificationCenterEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterEvents.swift; sourceTree = "<group>"; };
 		1EF8CCDA252CBE4100A7AF19 /* ApplicationSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSetup.swift; sourceTree = "<group>"; };
 		21439E5FB8B5B0A625E5FB33 /* Pods-AlarStudiosTestProjectApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlarStudiosTestProjectApp.release.xcconfig"; path = "Target Support Files/Pods-AlarStudiosTestProjectApp/Pods-AlarStudiosTestProjectApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,11 +188,10 @@
 		1E30E549252E0C94003EFA77 /* LoginFlowModule */ = {
 			isa = PBXGroup;
 			children = (
-				1E544EED252C746600EA0BC1 /* LoginForm */,
-				1E544EEE252C746B00EA0BC1 /* ElementList */,
-				1E30E520252E06DD003EFA77 /* LoginFlow.storyboard */,
-				1E30E528252E0707003EFA77 /* LoginViewController.swift */,
-				1E30E52D252E07FD003EFA77 /* ContentViewController.swift */,
+				1E7B23E1252E26B00028AE4A /* View */,
+				1E7B23E2252E27A40028AE4A /* LoginFlowIO.swift */,
+				1E7B23D2252E266B0028AE4A /* LoginFlowPresenter.swift */,
+				1E7B23D7252E267B0028AE4A /* LoginFlowInteractor.swift */,
 			);
 			path = LoginFlowModule;
 			sourceTree = "<group>";
@@ -380,6 +387,7 @@
 				1E71E23E252C9810000DA792 /* Extensions */,
 				1E71E248252C9854000DA792 /* Result.swift */,
 				1E7B238A252E105D0028AE4A /* Typealias.swift */,
+				1E7B23F5252E296F0028AE4A /* ViewType.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -501,6 +509,18 @@
 				1E7B23AF252E118C0028AE4A /* UIWindow+Ext.swift */,
 			);
 			path = UIWindow;
+			sourceTree = "<group>";
+		};
+		1E7B23E1252E26B00028AE4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E544EED252C746600EA0BC1 /* LoginForm */,
+				1E544EEE252C746B00EA0BC1 /* ElementList */,
+				1E30E520252E06DD003EFA77 /* LoginFlow.storyboard */,
+				1E30E528252E0707003EFA77 /* LoginViewController.swift */,
+				1E30E52D252E07FD003EFA77 /* ContentViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		25AAA7DF29772790208267C1 /* Pods */ = {
@@ -764,6 +784,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7B23D8252E267B0028AE4A /* LoginFlowInteractor.swift in Sources */,
 				1E7B23B0252E118C0028AE4A /* UIApplication+Ext.swift in Sources */,
 				1E544F06252C766A00EA0BC1 /* XIBLocalizable.swift in Sources */,
 				1E7B23B4252E118C0028AE4A /* UIViewController+Ext.swift in Sources */,
@@ -778,6 +799,7 @@
 				1E7B2396252E10F90028AE4A /* Collection+Safe.swift in Sources */,
 				1E544F05252C766A00EA0BC1 /* Storyboards.swift in Sources */,
 				1E30E544252E097C003EFA77 /* LoginFormView.swift in Sources */,
+				1E7B23D3252E266B0028AE4A /* LoginFlowPresenter.swift in Sources */,
 				1E544F07252C766A00EA0BC1 /* Strings.swift in Sources */,
 				1E71E20C252C8CB5000DA792 /* TestProjectAppService.swift in Sources */,
 				1E71E204252C8C83000DA792 /* UnauthorizedNetworkListener.swift in Sources */,
@@ -790,6 +812,7 @@
 				1E7B23B2252E118C0028AE4A /* UIButton+Ext.swift in Sources */,
 				1E7B23B8252E118C0028AE4A /* NibLoadable.swift in Sources */,
 				1E71E225252C93F5000DA792 /* StatusResponse.swift in Sources */,
+				1E7B23E3252E27A40028AE4A /* LoginFlowIO.swift in Sources */,
 				1E71E22B252C948A000DA792 /* EventLogger.swift in Sources */,
 				1E71E240252C9821000DA792 /* Data+Decoded.swift in Sources */,
 				1E544EAF252C72E600EA0BC1 /* AppDelegate.swift in Sources */,
@@ -802,6 +825,7 @@
 				1E7B2397252E10F90028AE4A /* Array+Ext.swift in Sources */,
 				1E30E529252E0707003EFA77 /* LoginViewController.swift in Sources */,
 				1E7B23B6252E118C0028AE4A /* UIColor+Shared.swift in Sources */,
+				1E7B23F6252E296F0028AE4A /* ViewType.swift in Sources */,
 				1E71E21A252C8FC4000DA792 /* DataResponse.swift in Sources */,
 				1E7B23BA252E118C0028AE4A /* UIWindow+Ext.swift in Sources */,
 			);

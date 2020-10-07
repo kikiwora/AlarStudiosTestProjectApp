@@ -51,7 +51,7 @@ extension LoginFormViewModel {
 extension LoginFormView {
     func render(_ viewModel: LoginFormViewModel = LoginFormViewModel()) {
         if viewModel.loginState == .failure {
-            print("Login Failed")
+            // TODO
         }
     }
 }
