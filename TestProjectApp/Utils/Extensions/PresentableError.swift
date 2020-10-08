@@ -33,4 +33,7 @@ extension PresentableError {
                                                localizedMessage: L10n.Error.genericRetryMessage)
     static let incorrectResponse = PresentableError(localizedTitle: L10n.Error.incorrectResponseTitle,
                                                     localizedMessage: L10n.Error.incorrectRespinseMessage)
+
+    static let loginDenied = PresentableError(localizedTitle: L10n.Error.loginDeniedTitle,
+                                              localizedMessage: L10n.Error.loginDeniedMessage)
 }

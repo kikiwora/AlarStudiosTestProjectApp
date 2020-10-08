@@ -91,15 +91,27 @@ extension LoginFormView {
 extension LoginFormView.ViewModel {
     enum LoginState {
         case success
-        case failure
+        case failure(error: Error)
         case unattempted
     }
 }
 
 extension LoginFormView {
     func render(_ viewModel: ViewModel) {
-        if viewModel.loginState == .failure {
-            // TODO
+        if case .failure(let error) = viewModel.loginState {
+            showAlert(with: error)
+        }
+    }
+    
+    private func showAlert(with error: Error) {
+        if let presentableError = error as? PresentableError {
+            let alertController = UIAlertController(title: presentableError.localizedTitle,
+                                                    message: presentableError.localizedMessage,
+                                                    preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "Try Again", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            UIApplication.appDelegate?.window?.present(alertController)
         }
     }
 }

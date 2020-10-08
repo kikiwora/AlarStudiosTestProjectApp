@@ -87,7 +87,7 @@ extension LoginViewController: LoginViewType {
     }
 
     func loginFailed(_ error: Error) {
-        loginFormView.render(LoginFormView.ViewModel.Factory.make(.failure))
+        loginFormView.render(LoginFormView.ViewModel.Factory.make(.failure(error: error)))
     }
 
     func returnToParent() {

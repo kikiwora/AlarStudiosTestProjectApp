@@ -23,6 +23,10 @@ internal enum L10n {
     internal static let incorrectRespinseMessage = L10n.tr("Localizable", "error.incorrect-respinse-message")
     /// Incorrect Server Response
     internal static let incorrectResponseTitle = L10n.tr("Localizable", "error.incorrect-response-title")
+    /// It seems like username or password you provided is incorrect
+    internal static let loginDeniedMessage = L10n.tr("Localizable", "error.login-denied-message")
+    /// Login failed
+    internal static let loginDeniedTitle = L10n.tr("Localizable", "error.login-denied-title")
   }
 
   internal enum Login {

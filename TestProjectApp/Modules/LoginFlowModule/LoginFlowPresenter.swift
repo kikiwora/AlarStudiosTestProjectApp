@@ -22,16 +22,26 @@ extension LoginFlowPresenter: LoginFlowPresenterType {
     func processLoginResponse(_ response: Result<LoginResponse>) {
 
         switch response {
-            case .success(let loginResult):
-                if !loginResult.isOK() {
+            case .success(let response):
+                guard response.isOK() else {
                     interactor.clearUserSession()
+                    processLoginError(for: response)
                     return
                 }
-                interactor.saveUserSession(loginResult.code)
+
+                interactor.saveUserSession(response.code)
                 onLoginFinished()
 
-            case .failure(let error):
-                onLoginFailed(error)
+            case .failure:
+                onLoginFailed(PresentableError.incorrectResponse)
+        }
+    }
+
+    private func processLoginError(for response: LoginResponse) {
+        if response.hasAnError() {
+            onLoginFailed(PresentableError.loginDenied)
+        } else {
+            onLoginFailed(PresentableError.genericRetry)
         }
     }
 
