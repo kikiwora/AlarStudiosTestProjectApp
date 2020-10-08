@@ -32,28 +32,38 @@ class LoginFormView: UIView {
     @IBOutlet weak var loginButton: UIButton! {
         didSet {
             loginButton.setupLoginAppearance()
-            loginButton.isEnabled = false
+            shouldAllowLogin = false
         }
     }
 
     var onLogin: LoginCallback?
     var onKeyboardDismiss: Block.Empty?
+    private var shouldAllowLogin: Bool! {
+        didSet {
+            if shouldAllowLogin {
+                loginButton.removeDisabledAlpha()
+            } else {
+                loginButton.applyDisabledAlpha()
+            }
+        }
+    }
     
     @IBAction func loginAction(_ sender: Any) {
+        validateFormFields()
         guard loginButton.isEnabled else { return }
         onLogin?((username: usernameField.text ?? "", password: passwordField.text ?? ""))
     }
 
     @IBAction func usernameChanged(_ sender: Any) {
-        formFieldsChanged()
+        validateFormFields()
     }
 
     @IBAction func passwordChanged(_ sender: Any) {
-        formFieldsChanged()
+        validateFormFields()
     }
 
-    func formFieldsChanged() {
-        loginButton.isEnabled = !(usernameField.text?.isEmpty ?? true || passwordField.text?.isEmpty ?? true)
+    func validateFormFields() {
+        shouldAllowLogin = !(usernameField.text?.isEmpty ?? true || passwordField.text?.isEmpty ?? true)
     }
 
     func viewDidLayoutSubviews() {
@@ -102,13 +112,13 @@ extension LoginFormView {
             showAlert(with: error)
         }
     }
-    
+
     private func showAlert(with error: Error) {
         if let presentableError = error as? PresentableError {
             let alertController = UIAlertController(title: presentableError.localizedTitle,
                                                     message: presentableError.localizedMessage,
                                                     preferredStyle: .alert)
-            
+
             let defaultAction = UIAlertAction(title: "Try Again", style: .default, handler: nil)
             alertController.addAction(defaultAction)
             UIApplication.appDelegate?.window?.present(alertController)

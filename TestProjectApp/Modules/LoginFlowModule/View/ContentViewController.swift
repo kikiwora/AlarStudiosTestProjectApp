@@ -15,6 +15,8 @@ class ContentViewController: UIViewController {
         return presenter
     }()
 
+    weak var contentView: UIViewController?
+
     @IBAction func unwindToContentView(segue: UIStoryboardSegue) { }
 
     override func viewDidLoad() {
@@ -23,6 +25,12 @@ class ContentViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         checkUserAuthorization()
+    }
+
+    private func loadContentView() {
+        let contentView = Storyboard.ContentView.initialScene.instantiate()
+        self.contentView = contentView
+        self.addChild(contentView)
     }
 }
 
@@ -58,7 +66,7 @@ extension ContentViewController {
             return
         }
 
-        presenter.performDataLoad(page: 1)
+        loadContentView()
     }
 }
 

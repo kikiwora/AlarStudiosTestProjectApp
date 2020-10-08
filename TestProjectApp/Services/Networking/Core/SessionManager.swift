@@ -8,24 +8,38 @@
 import Foundation
 
 final class SessionManager {
-    private var _code: String?  // This should be in persistant storage
+    private static let codeKey = "code"
 
-    var code: String? {
+    private(set) var code: String?  // Needed to avoid frequent disk reads
+    var _code: String? {
         get {
-            return _code
+            do {
+                return try Storage.SharedStorage.get(SessionManager.codeKey) as? String
+            } catch {
+                return nil
+            }
+        }
+        set {
+            Storage.SharedStorage.save(SessionManager.codeKey, value: newValue as Any)
         }
     }
 
+    init() {
+        code = _code
+    }
+
     func clearSession() {
-        _code = nil
+        code = nil
+        Storage.SharedStorage.delete(SessionManager.codeKey)
     }
 
     func saveSession(with code: String) {
+        self.code = code
         _code = code
     }
 
     func isUserAuthorized() -> Bool {
-        return (_code != nil) && _code?.isEmpty == false
+        return (code != nil) && code?.isEmpty == false
     }
 }
 
