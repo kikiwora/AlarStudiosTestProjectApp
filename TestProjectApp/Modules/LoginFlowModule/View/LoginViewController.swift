@@ -28,6 +28,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoginCallback()
+        hideKeyboardWhenTappedAround()
+        loginFormView.onKeyboardDismiss = { [weak self] in self?.dismissKeyboard() }
     }
 }
 

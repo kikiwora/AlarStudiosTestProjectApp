@@ -15,7 +15,7 @@ extension UIViewController {
         view.addGestureRecognizer(tap)
     }
 
-    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer? = nil) {
         view.endEditing(true)
 
         if let nav = self.navigationController {
