@@ -19,6 +19,8 @@ class ContentViewController: UIViewController {
 
     @IBAction func unwindToContentView(segue: UIStoryboardSegue) { }
 
+    var dataReloadHandler: ((UIAlertAction) -> Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -31,6 +33,7 @@ class ContentViewController: UIViewController {
         let contentView = Storyboard.ContentView.initialScene.instantiate()
         self.contentView = contentView
         self.addChild(contentView)
+        presenter.performDataLoad(page: 1)
     }
 }
 
@@ -41,8 +44,21 @@ extension ContentViewController: ContentViewType {
         checkUserAuthorization()
     }
 
-    func renderData() {
+    func render(_ viewModel: ContentViewController.ViewModel) {
         // TODO
+    }
+
+    func dataLoadingFailed(_ error: Error) {
+        if let presentableError = error as? PresentableError {
+            let alertController = UIAlertController(title: presentableError.localizedTitle,
+                                                    message: presentableError.localizedMessage,
+                                                    preferredStyle: .alert)
+
+            let defaultAction = UIAlertAction(title: "Try Again", style: .default, handler: dataReloadHandler)
+
+            alertController.addAction(defaultAction)
+            UIApplication.appDelegate?.window?.present(alertController)
+        }
     }
 
     func showLoginForm() {
@@ -75,5 +91,42 @@ extension ContentViewController {
 extension ContentViewController {
     enum Constants {
         static let showLoginSegueIdentifier = "showLogin"
+    }
+}
+
+// MARK: - ViewModel
+
+extension ContentViewController {
+    struct ViewModel {
+        let page: Int?
+        let content: [ContentElement]?
+    }
+
+    struct ContentElement {
+        let name: String?
+        let country: String?
+        let lat: Double?
+        let lon: Double?
+    }
+}
+
+extension ContentViewController.ContentElement {
+    enum Factory {
+        static func make(from dataElement: DataElement) -> ContentViewController.ContentElement {
+            return ContentViewController.ContentElement(name: dataElement.name,
+                                                        country: dataElement.country,
+                                                        lat: dataElement.lat,
+                                                        lon: dataElement.lon)
+        }
+    }
+}
+
+extension ContentViewController.ViewModel {
+    enum Factory {
+        static func make(from dataResponse: DataResponse) -> ContentViewController.ViewModel {
+            let contentElements = dataResponse.data?.map({ ContentViewController.ContentElement.Factory.make(from: $0) })
+            return ContentViewController.ViewModel(page: dataResponse.page,
+                                                   content: contentElements)
+        }
     }
 }

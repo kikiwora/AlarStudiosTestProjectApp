@@ -24,7 +24,6 @@ extension LoginFlowPresenter: LoginFlowPresenterType {
         switch response {
             case .success(let response):
                 guard response.isOK() else {
-                    interactor.clearUserSession()
                     processLoginError(for: response)
                     return
                 }
@@ -46,7 +45,23 @@ extension LoginFlowPresenter: LoginFlowPresenterType {
     }
 
     func dataLoaded(_ response: Result<DataResponse>) {
-        contentView.renderData()
+        switch response {
+            case .success(let response):
+                guard response.isOK() else {
+                    processDataLoadError(for: response)
+                    return
+                }
+
+                contentView.render(ContentViewController.ViewModel.Factory.make(from: response))
+            case .failure(let error):
+                contentView.dataLoadingFailed(error)
+        }
+    }
+
+    private func processDataLoadError(for response: DataResponse) {
+        if response.isUnauthorized() { return }
+
+        onDataLoadFailed(PresentableError.genericRetry)
     }
 
     private func onLoginFinished() {
@@ -57,6 +72,10 @@ extension LoginFlowPresenter: LoginFlowPresenterType {
 
     private func onLoginFailed(_ error: Error) {
         loginView.loginFailed(error)
+    }
+
+    private func onDataLoadFailed(_ error: Error) {
+        contentView.dataLoadingFailed(error)
     }
 }
 

@@ -15,16 +15,18 @@ protocol StorageType {
 
 struct PersistantStorage: StorageType {
 
-    func save(_ key: String, value: Any) {
+    // TODO: Note - I made use of UserDefaults to save some time, but in reality we should not use it due to security issues
 
+    func save(_ key: String, value: Any) {
+        UserDefaults.standard.setValue(value, forKey: key)
     }
 
     func get(_ key: String) throws -> Any? {
-        return nil
+        return UserDefaults.standard.object(forKey: key) as Any
     }
 
     func delete(_ key: String) {
-        
+        UserDefaults.standard.removeObject(forKey: key)
     }
 }
 

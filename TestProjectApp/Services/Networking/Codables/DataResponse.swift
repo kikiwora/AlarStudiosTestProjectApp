@@ -10,14 +10,14 @@ import Foundation
 struct DataResponse: StatusRepresentable, Decodable {
     private(set) var status: RequestStatus
     
-    let page: Int
-    let data: [DataElement]
+    let page: Int?
+    let data: [DataElement]?
 }
 
 struct DataElement: Decodable {
     let id: String
-    let name: String
-    let country: String
-    let lat: Double
-    let lon: Double
+    let name: String?
+    let country: String?
+    let lat: Double?
+    let lon: Double?
 }
