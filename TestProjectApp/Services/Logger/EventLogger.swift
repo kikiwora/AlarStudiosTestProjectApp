@@ -8,12 +8,16 @@
 import Foundation
 import os.log
 
-enum EventLogger<T> {
+enum EventLogger<T> where T: LosslessStringConvertible {
     static func log(_ data: T) {
         #if DEBUG
             print(data)
         #else
-            os_log(data)
+        if #available(iOS 14.0, *) {
+            os_log("\(data)")
+        } else {
+            // TODO
+        }
         #endif
     }
 }
