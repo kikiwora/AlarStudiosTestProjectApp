@@ -14,21 +14,20 @@
             <objects>
                 <viewController storyboardIdentifier="LoginView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b9w-Qb-V88" customClass="LoginViewController" customModule="TestProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X49-HS-lrR">
-                        <rect key="frame" x="0.0" y="0.0" width="720" height="560"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="scrollableAxes" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ug-Xr-fVC">
-                                <rect key="frame" x="0.0" y="0.0" width="720" height="560"/>
+                                <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOX-2Z-y0c">
-                                        <rect key="frame" x="0.0" y="0.0" width="720" height="560"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bt4-2Q-5ad">
-                                                <rect key="frame" x="160" y="205" width="400" height="150"/>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="170" translatesAutoresizingMaskIntoConstraints="NO" id="bt4-2Q-5ad">
+                                                <rect key="frame" x="150" y="215" width="500" height="170"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="67S-DE-HT4"/>
-                                                    <constraint firstAttribute="height" priority="999" constant="150" id="n1y-jp-aq6"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="67S-DE-HT4"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -90,7 +89,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Mf6-3y-c8N"/>
                     <connections>
-                        <segue destination="b9w-Qb-V88" kind="presentation" identifier="showLogin" destinationCreationSelector="showLoginSegue" id="a3m-pu-icY"/>
+                        <segue destination="b9w-Qb-V88" kind="presentation" identifier="showLogin" modalPresentationStyle="overFullScreen" id="a3m-pu-icY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKY-yv-xuK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

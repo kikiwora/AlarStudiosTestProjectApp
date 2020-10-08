@@ -21,6 +21,8 @@
 		1E544F06252C766A00EA0BC1 /* XIBLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544F02252C766900EA0BC1 /* XIBLocalizable.swift */; };
 		1E544F07252C766A00EA0BC1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E544F03252C766900EA0BC1 /* Strings.swift */; };
 		1E544F08252C766A00EA0BC1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E544F04252C766A00EA0BC1 /* Localizable.strings */; };
+		1E64A30D252F2B0000964451 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64A30C252F2B0000964451 /* UIView+Ext.swift */; };
+		1E64A313252F360300964451 /* CALayer+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64A312252F360300964451 /* CALayer+Ext.swift */; };
 		1E71E1B1252C8242000DA792 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E71E1B0252C8242000DA792 /* LoginResponse.swift */; };
 		1E71E1C1252C845E000DA792 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E71E1C0252C845E000DA792 /* Endpoint.swift */; };
 		1E71E1C9252C848F000DA792 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E71E1C8252C848F000DA792 /* TargetType.swift */; };
@@ -103,6 +105,8 @@
 		1E544F02252C766900EA0BC1 /* XIBLocalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XIBLocalizable.swift; sourceTree = "<group>"; };
 		1E544F03252C766900EA0BC1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		1E544F04252C766A00EA0BC1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		1E64A30C252F2B0000964451 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		1E64A312252F360300964451 /* CALayer+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Ext.swift"; sourceTree = "<group>"; };
 		1E71E1B0252C8242000DA792 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		1E71E1C0252C845E000DA792 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1E71E1C8252C848F000DA792 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
@@ -320,6 +324,14 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		1E64A311252F35F500964451 /* CALayer */ = {
+			isa = PBXGroup;
+			children = (
+				1E64A312252F360300964451 /* CALayer+Ext.swift */,
+			);
+			path = CALayer;
+			sourceTree = "<group>";
+		};
 		1E71E1A5252C7C8D000DA792 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +444,7 @@
 		1E7B239C252E117F0028AE4A /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				1E64A311252F35F500964451 /* CALayer */,
 				1E7B239D252E11890028AE4A /* UIApplication */,
 				1E7B23A1252E118A0028AE4A /* UIButton */,
 				1E7B23A7252E118B0028AE4A /* UIColor */,
@@ -491,6 +504,7 @@
 			children = (
 				1E7B23AA252E118B0028AE4A /* UIView+Custom.swift */,
 				1E7B23AB252E118B0028AE4A /* NibLoadable.swift */,
+				1E64A30C252F2B0000964451 /* UIView+Ext.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -819,6 +833,7 @@
 				1E71E22B252C948A000DA792 /* EventLogger.swift in Sources */,
 				1E71E240252C9821000DA792 /* Data+Decoded.swift in Sources */,
 				1E544EAF252C72E600EA0BC1 /* AppDelegate.swift in Sources */,
+				1E64A30D252F2B0000964451 /* UIView+Ext.swift in Sources */,
 				1E71E1B1252C8242000DA792 /* LoginResponse.swift in Sources */,
 				1E71E1CE252C84AE000DA792 /* Environment.swift in Sources */,
 				1E71E249252C9854000DA792 /* Result.swift in Sources */,
@@ -827,6 +842,7 @@
 				1E7B23B7252E118C0028AE4A /* UIView+Custom.swift in Sources */,
 				1E7B2397252E10F90028AE4A /* Array+Ext.swift in Sources */,
 				1E30E529252E0707003EFA77 /* LoginViewController.swift in Sources */,
+				1E64A313252F360300964451 /* CALayer+Ext.swift in Sources */,
 				1E7B23B6252E118C0028AE4A /* UIColor+Shared.swift in Sources */,
 				1E7B23F6252E296F0028AE4A /* ViewType.swift in Sources */,
 				1E71E21A252C8FC4000DA792 /* DataResponse.swift in Sources */,

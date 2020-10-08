@@ -37,3 +37,9 @@ extension Array where Element: UIView {
         self.forEach { $0.removeFromSuperview() }
     }
 }
+
+extension Array where Element: CALayer {
+    func removeFromSuperview() {
+        self.forEach { $0.removeFromSuperlayer() }
+    }
+}

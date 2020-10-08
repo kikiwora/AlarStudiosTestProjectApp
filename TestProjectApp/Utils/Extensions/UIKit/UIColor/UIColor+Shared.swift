@@ -8,20 +8,33 @@
 import UIKit.UIColor
 
 extension UIColor {
-    enum Shared {
-        enum Backgroud {
-            static let appIconBackgroundColor: UIColor = #colorLiteral(red: 0.1725490196, green: 0.5335745215, blue: 0.01497463789, alpha: 1)
-            static let appIconBackgroundColorLight: UIColor = #colorLiteral(red: 0.1917871968, green: 0.6, blue: 0.01683885263, alpha: 1)
-            static let genericWhiteBackgroundColor: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        }
-        enum Border {
-            static let genericGreenBorderColor: UIColor = #colorLiteral(red: 0, green: 0.4484122992, blue: 0, alpha: 1)
-        }
-        enum Sheet {
-            static let genericOffWHiteSheetColor: UIColor = #colorLiteral(red: 0.9607340693, green: 0.9608191848, blue: 0.9606630206, alpha: 1)
-        }
-        enum Text {
-            static let genericWhiteTextColor: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    enum SharedTheme {
+        enum Login {
+            static let textFieldUnderlineColor: UIColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+
+            static func loginButtonBackground(for state: UIControl.State = .normal) -> UIColor {
+                let defaultStateColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+                switch state {
+                    case .normal:
+                        return defaultStateColor
+                    case .highlighted:
+                        return #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+                    default:
+                        return defaultStateColor
+                }
+            }
+
+            static func loginButtonTitleColor(for state: UIControl.State = .normal) -> UIColor {
+                let defaultStateColor: UIColor = .white
+                switch state {
+                    case .normal:
+                        return defaultStateColor
+                    case .highlighted:
+                        return .black
+                    default:
+                        return defaultStateColor
+                }
+            }
         }
     }
 }

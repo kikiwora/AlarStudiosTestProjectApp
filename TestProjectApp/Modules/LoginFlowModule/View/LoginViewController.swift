@@ -32,7 +32,14 @@ class LoginViewController: UIViewController {
         setupLoginCallback()
         setupKeyboardEvents()
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        loginFormView.viewDidLayoutSubviews()
+    }
 }
+
+// MARK: - Keyboard management methods
 
 private extension LoginViewController {
 
@@ -55,7 +62,7 @@ private extension LoginViewController {
             return
         }
 
-        UIView.animate(withDuration: 0.5) { [weak self] in
+        UIView.animate(withDuration: Constants.Animations.adjustInsetsForKeyboardDuration) { [weak self] in
             let adjustmentHeight = keyboardFrame.cgRectValue.height
             self?.loginScrollViewBottomMargin.constant = show ? adjustmentHeight : 0
             self?.view.layoutIfNeeded()
@@ -106,5 +113,9 @@ private extension LoginViewController {
 extension LoginViewController {
     enum Constants {
         static let returnToContentViewSegueIdentifier = "returnToContentView"
+
+        enum Animations {
+            static let adjustInsetsForKeyboardDuration: TimeInterval = 0.3
+        }
     }
 }

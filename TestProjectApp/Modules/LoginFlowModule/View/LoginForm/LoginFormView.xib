@@ -11,53 +11,106 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="LoginFormView" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="LoginFormView" customModule="TestProjectApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="400" height="160"/>
+            <rect key="frame" x="0.0" y="0.0" width="400" height="213"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NpS-Iw-JiR">
-                    <rect key="frame" x="10" y="10" width="380" height="140"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NpS-Iw-JiR">
+                    <rect key="frame" x="10" y="10" width="380" height="193"/>
                     <subviews>
                         <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="[Username]" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MuZ-z4-lXq">
-                            <rect key="frame" x="0.0" y="0.0" width="380" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="380" height="54.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                         </textField>
                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="[Password]" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zs2-Nu-fZ8">
-                            <rect key="frame" x="0.0" y="50" width="380" height="40"/>
+                            <rect key="frame" x="0.0" y="64.5" width="380" height="54"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEu-o8-4Nb">
-                            <rect key="frame" x="0.0" y="100" width="380" height="40"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZu-7H-Z7Y">
+                            <rect key="frame" x="0.0" y="128.5" width="380" height="64.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEu-o8-4Nb">
+                                    <rect key="frame" x="0.0" y="10" width="380" height="54.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="999" constant="50" id="VTH-wD-8Om"/>
+                                        <constraint firstAttribute="height" priority="998" constant="40" id="YDM-VO-nVK"/>
+                                        <constraint firstAttribute="width" constant="150" id="rfV-Pw-DT0"/>
+                                    </constraints>
+                                    <state key="normal" title="[Login]"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="login.login-title"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="VTH-wD-8Om"/>
+                                            <exclude reference="YDM-VO-nVK"/>
+                                            <exclude reference="rfV-Pw-DT0"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="YDM-VO-nVK"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="VTH-wD-8Om"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=regular">
+                                        <mask key="constraints">
+                                            <include reference="rfV-Pw-DT0"/>
+                                        </mask>
+                                    </variation>
+                                    <connections>
+                                        <action selector="loginAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="8BC-XG-8uz"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" priority="999" constant="50" id="VTH-wD-8Om"/>
-                                <constraint firstAttribute="height" priority="998" constant="30" id="YDM-VO-nVK"/>
+                                <constraint firstItem="XEu-o8-4Nb" firstAttribute="top" secondItem="WZu-7H-Z7Y" secondAttribute="top" priority="999" constant="10" id="3Bi-ZS-YC8"/>
+                                <constraint firstItem="XEu-o8-4Nb" firstAttribute="leading" secondItem="WZu-7H-Z7Y" secondAttribute="leading" id="qAY-pw-TE5"/>
+                                <constraint firstItem="XEu-o8-4Nb" firstAttribute="top" secondItem="WZu-7H-Z7Y" secondAttribute="top" priority="998" id="vyI-9a-fGB"/>
+                                <constraint firstAttribute="trailing" secondItem="XEu-o8-4Nb" secondAttribute="trailing" id="yoG-KV-8ZJ"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XEu-o8-4Nb" secondAttribute="trailing" id="zBq-1n-xfs"/>
+                                <constraint firstAttribute="bottom" secondItem="XEu-o8-4Nb" secondAttribute="bottom" id="zuk-x1-Vjl"/>
                             </constraints>
-                            <state key="normal" title="[Login]"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="login.login-title"/>
-                            </userDefinedRuntimeAttributes>
                             <variation key="default">
                                 <mask key="constraints">
-                                    <exclude reference="VTH-wD-8Om"/>
-                                    <exclude reference="YDM-VO-nVK"/>
+                                    <exclude reference="3Bi-ZS-YC8"/>
+                                    <exclude reference="vyI-9a-fGB"/>
+                                    <exclude reference="yoG-KV-8ZJ"/>
+                                    <exclude reference="zBq-1n-xfs"/>
                                 </mask>
                             </variation>
                             <variation key="heightClass=compact">
                                 <mask key="constraints">
-                                    <include reference="YDM-VO-nVK"/>
+                                    <include reference="vyI-9a-fGB"/>
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular">
                                 <mask key="constraints">
-                                    <include reference="VTH-wD-8Om"/>
+                                    <include reference="3Bi-ZS-YC8"/>
                                 </mask>
                             </variation>
-                            <connections>
-                                <action selector="loginAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="8BC-XG-8uz"/>
-                            </connections>
-                        </button>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="yoG-KV-8ZJ"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=regular">
+                                <mask key="constraints">
+                                    <include reference="zBq-1n-xfs"/>
+                                </mask>
+                            </variation>
+                        </view>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="Zs2-Nu-fZ8" firstAttribute="height" secondItem="MuZ-z4-lXq" secondAttribute="height" id="Gzk-Fi-Oqw"/>
+                        <constraint firstItem="MuZ-z4-lXq" firstAttribute="height" secondItem="XEu-o8-4Nb" secondAttribute="height" priority="999" id="oFn-EY-FcQ"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,15 +118,16 @@
                 <constraint firstItem="NpS-Iw-JiR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5z2-dp-uhy"/>
                 <constraint firstItem="NpS-Iw-JiR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="7W4-p2-m0Q"/>
                 <constraint firstAttribute="trailing" secondItem="NpS-Iw-JiR" secondAttribute="trailing" constant="10" id="7pK-Gk-iVq"/>
-                <constraint firstAttribute="bottom" secondItem="NpS-Iw-JiR" secondAttribute="bottom" constant="10" id="fXZ-SW-A2o"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="NpS-Iw-JiR" secondAttribute="bottom" constant="10" id="fXZ-SW-A2o"/>
                 <constraint firstItem="NpS-Iw-JiR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="ybq-CY-bQo"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="loginButton" destination="XEu-o8-4Nb" id="U0W-2C-1Qp"/>
                 <outlet property="passwordField" destination="Zs2-Nu-fZ8" id="dof-SA-QJO"/>
                 <outlet property="usernameField" destination="MuZ-z4-lXq" id="7ve-Zn-x92"/>
             </connections>
-            <point key="canvasLocation" x="278.26086956521743" y="-202.90178571428569"/>
+            <point key="canvasLocation" x="278.26086956521743" y="-185.15625"/>
         </view>
     </objects>
     <resources>
