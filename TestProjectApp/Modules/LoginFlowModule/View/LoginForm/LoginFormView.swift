@@ -19,6 +19,7 @@ class LoginFormView: UIView {
             usernameField.placeholder = L10n.Login.usernamePlaceholder
             usernameField.delegate = self
             usernameField.setupLoginAppearance()
+            usernameField.becomeFirstResponder()
         }
     }
     @IBOutlet weak var passwordField: UITextField! {
@@ -31,6 +32,7 @@ class LoginFormView: UIView {
     @IBOutlet weak var loginButton: UIButton! {
         didSet {
             loginButton.setupLoginAppearance()
+            loginButton.isEnabled = false
         }
     }
 
@@ -38,7 +40,20 @@ class LoginFormView: UIView {
     var onKeyboardDismiss: Block.Empty?
     
     @IBAction func loginAction(_ sender: Any) {
+        guard loginButton.isEnabled else { return }
         onLogin?((username: usernameField.text ?? "", password: passwordField.text ?? ""))
+    }
+
+    @IBAction func usernameChanged(_ sender: Any) {
+        formFieldsChanged()
+    }
+
+    @IBAction func passwordChanged(_ sender: Any) {
+        formFieldsChanged()
+    }
+
+    func formFieldsChanged() {
+        loginButton.isEnabled = !(usernameField.text?.isEmpty ?? true || passwordField.text?.isEmpty ?? true)
     }
 
     func viewDidLayoutSubviews() {

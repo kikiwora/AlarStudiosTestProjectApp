@@ -21,11 +21,17 @@
                             <rect key="frame" x="0.0" y="0.0" width="380" height="54.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                            <connections>
+                                <action selector="usernameChanged:" destination="iN0-l3-epB" eventType="editingDidEnd" id="jFp-PI-uLc"/>
+                            </connections>
                         </textField>
                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="[Password]" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zs2-Nu-fZ8">
                             <rect key="frame" x="0.0" y="64.5" width="380" height="54"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                            <connections>
+                                <action selector="passwordChanged:" destination="iN0-l3-epB" eventType="editingDidEnd" id="ivA-aw-I0s"/>
+                            </connections>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZu-7H-Z7Y">
                             <rect key="frame" x="0.0" y="128.5" width="380" height="64.5"/>
