@@ -14,36 +14,50 @@
             <rect key="frame" x="0.0" y="0.0" width="400" height="160"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NpS-Iw-JiR">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NpS-Iw-JiR">
                     <rect key="frame" x="10" y="10" width="380" height="140"/>
                     <subviews>
-                        <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MuZ-z4-lXq">
-                            <rect key="frame" x="0.0" y="0.0" width="380" height="35"/>
+                        <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="[Username]" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MuZ-z4-lXq">
+                            <rect key="frame" x="0.0" y="0.0" width="380" height="40"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="username"/>
                         </textField>
-                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zs2-Nu-fZ8">
-                            <rect key="frame" x="0.0" y="45" width="380" height="35"/>
+                        <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="[Password]" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zs2-Nu-fZ8">
+                            <rect key="frame" x="0.0" y="50" width="380" height="40"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEu-o8-4Nb">
-                            <rect key="frame" x="0.0" y="90" width="380" height="50"/>
+                            <rect key="frame" x="0.0" y="100" width="380" height="40"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="VTH-wD-8Om"/>
+                                <constraint firstAttribute="height" priority="999" constant="50" id="VTH-wD-8Om"/>
+                                <constraint firstAttribute="height" priority="998" constant="30" id="YDM-VO-nVK"/>
                             </constraints>
                             <state key="normal" title="[Login]"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="login.login-title"/>
                             </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="VTH-wD-8Om"/>
+                                    <exclude reference="YDM-VO-nVK"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=compact">
+                                <mask key="constraints">
+                                    <include reference="YDM-VO-nVK"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular">
+                                <mask key="constraints">
+                                    <include reference="VTH-wD-8Om"/>
+                                </mask>
+                            </variation>
                             <connections>
                                 <action selector="loginAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="8BC-XG-8uz"/>
                             </connections>
                         </button>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="Zs2-Nu-fZ8" firstAttribute="height" secondItem="MuZ-z4-lXq" secondAttribute="height" id="A0k-zP-maZ"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

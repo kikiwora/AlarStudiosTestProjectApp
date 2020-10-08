@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oii-qX-XI8">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="mac" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -14,32 +14,33 @@
             <objects>
                 <viewController storyboardIdentifier="LoginView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b9w-Qb-V88" customClass="LoginViewController" customModule="TestProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X49-HS-lrR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="720" height="560"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" contentInsetAdjustmentBehavior="scrollableAxes" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ug-Xr-fVC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="0.0" width="720" height="560"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOX-2Z-y0c">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="720" height="560"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bt4-2Q-5ad">
-                                                <rect key="frame" x="0.0" y="287" width="375" height="150"/>
+                                                <rect key="frame" x="160" y="205" width="400" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="n1y-jp-aq6"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="400" id="67S-DE-HT4"/>
+                                                    <constraint firstAttribute="height" priority="999" constant="150" id="n1y-jp-aq6"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="bt4-2Q-5ad" firstAttribute="centerY" secondItem="YOX-2Z-y0c" secondAttribute="centerY" id="5Oj-jP-KVj"/>
-                                            <constraint firstItem="bt4-2Q-5ad" firstAttribute="leading" secondItem="YOX-2Z-y0c" secondAttribute="leading" id="B5y-zl-2gS"/>
+                                            <constraint firstItem="bt4-2Q-5ad" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YOX-2Z-y0c" secondAttribute="leading" id="B5y-zl-2gS"/>
+                                            <constraint firstItem="bt4-2Q-5ad" firstAttribute="width" secondItem="YOX-2Z-y0c" secondAttribute="width" priority="999" id="BQj-jZ-9dd"/>
                                             <constraint firstItem="bt4-2Q-5ad" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YOX-2Z-y0c" secondAttribute="top" id="Gc1-Q5-ooo"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bt4-2Q-5ad" secondAttribute="bottom" id="LoT-XF-4m4"/>
                                             <constraint firstItem="bt4-2Q-5ad" firstAttribute="centerX" secondItem="YOX-2Z-y0c" secondAttribute="centerX" id="Sze-xo-86w"/>
-                                            <constraint firstItem="bt4-2Q-5ad" firstAttribute="width" secondItem="YOX-2Z-y0c" secondAttribute="width" id="WUr-eE-5Zm"/>
-                                            <constraint firstAttribute="trailing" secondItem="bt4-2Q-5ad" secondAttribute="trailing" id="d0C-u2-BgQ"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bt4-2Q-5ad" secondAttribute="trailing" id="d0C-u2-BgQ"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -82,7 +83,7 @@
             <objects>
                 <viewController storyboardIdentifier="ContentView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KL6-XU-3gc" customClass="ContentViewController" customModule="TestProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fpn-yU-jpa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="pAs-1D-NJr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
