@@ -52,7 +52,7 @@ extension LoginFlowPresenter: LoginFlowPresenterType {
                     return
                 }
 
-                contentView.render(ContentViewController.ViewModel.Factory.make(from: response))
+                contentView.render(ElementsListViewController.ViewModel.Factory.make(from: response))
             case .failure(let error):
                 contentView.dataLoadingFailed(error)
         }

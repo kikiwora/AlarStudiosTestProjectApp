@@ -44,7 +44,7 @@ extension ContentViewController: ContentViewType {
         checkUserAuthorization()
     }
 
-    func render(_ viewModel: ContentViewController.ViewModel) {
+    func render(_ viewModel: ElementsListViewController.ViewModel) {
         // TODO
     }
 
@@ -91,42 +91,5 @@ extension ContentViewController {
 extension ContentViewController {
     enum Constants {
         static let showLoginSegueIdentifier = "showLogin"
-    }
-}
-
-// MARK: - ViewModel
-
-extension ContentViewController {
-    struct ViewModel {
-        let page: Int?
-        let content: [ContentElement]?
-    }
-
-    struct ContentElement {
-        let name: String?
-        let country: String?
-        let lat: Double?
-        let lon: Double?
-    }
-}
-
-extension ContentViewController.ContentElement {
-    enum Factory {
-        static func make(from dataElement: DataElement) -> ContentViewController.ContentElement {
-            return ContentViewController.ContentElement(name: dataElement.name,
-                                                        country: dataElement.country,
-                                                        lat: dataElement.lat,
-                                                        lon: dataElement.lon)
-        }
-    }
-}
-
-extension ContentViewController.ViewModel {
-    enum Factory {
-        static func make(from dataResponse: DataResponse) -> ContentViewController.ViewModel {
-            let contentElements = dataResponse.data?.map({ ContentViewController.ContentElement.Factory.make(from: $0) })
-            return ContentViewController.ViewModel(page: dataResponse.page,
-                                                   content: contentElements)
-        }
     }
 }

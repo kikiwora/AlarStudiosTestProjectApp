@@ -17,7 +17,7 @@ protocol LoginViewType: ViewType {
 
 protocol ContentViewType: ViewType {
     func authorizationFinished()
-    func render(_ viewModel: ContentViewController.ViewModel)
+    func render(_ viewModel: ElementsListViewController.ViewModel)
     func dataLoadingFailed(_ error: Error)
     func showLoginForm()
 }
