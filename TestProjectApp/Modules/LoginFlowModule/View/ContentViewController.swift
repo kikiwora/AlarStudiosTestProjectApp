@@ -74,7 +74,7 @@ extension ContentViewController {
         if segue.identifier == Constants.showLoginSegueIdentifier {
             let loginView = segue.destination as? LoginViewController
             loginView?.presenter = presenter as? LoginViewOutput
-            (presenter as! LoginFlowPresenter).loginView = loginView
+            (presenter as? LoginFlowPresenter)?.loginView = loginView
         }
     }
 
