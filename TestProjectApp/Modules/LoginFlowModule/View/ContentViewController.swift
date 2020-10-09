@@ -16,8 +16,10 @@ class ContentViewController: UIViewController {
     }()
 
     lazy var contentView: UIViewController = {
+        // TODO: This may not work. Untested. Maybe it's not even necessary
         let contentView = Storyboard.ContentView.initialScene.instantiate()
-        self.addChild(contentView)
+        self.view.addSubview(contentView.view)
+        contentView.view.pinToSafeArea(self.view)
         return contentView
     }()
 
@@ -30,24 +32,18 @@ class ContentViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        checkUserAuthorization()
-    }
-
-    private func loadDataForContentView() {
-        // TODO: Implement data loading here
-//        presenter.performDataLoad(page: 1)
+        presenter.checkUserAuthorization()
     }
 }
 
 // MARK: - User Authorization Flow
 
 extension ContentViewController: ContentViewType {
-    func authorizationFinished() {
-        checkUserAuthorization()
-    }
 
     func render(_ viewModel: ElementsListViewController.ViewModel) {
         // TODO: Implement render calls here
+        let testDetailView = ElementDetailView.instantiateFromNib(in: self.view)
+        testDetailView.render((viewModel.elementViewModels?.first)!)
     }
 
     func dataLoadingFailed(_ error: Error) {
@@ -76,15 +72,6 @@ extension ContentViewController {
             loginView?.presenter = presenter as? LoginViewOutput
             (presenter as? LoginFlowPresenter)?.loginView = loginView
         }
-    }
-
-    private func checkUserAuthorization() {
-        guard presenter.isUserAuthorized() else {
-            presenter.performLogin()
-            return
-        }
-
-        loadDataForContentView()
     }
 }
 

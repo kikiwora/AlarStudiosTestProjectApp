@@ -14,15 +14,11 @@ class ElementDetailView: UIView {
             // TODO: Customization here
         }
     }
-    
-    @IBOutlet weak var titleStack: UIStackView! {
-        didSet {
-            nameLabel = .instantiateFromNib(in: titleStack)
-            countryLabel = .instantiateFromNib(in: titleStack)
-        }
-    }
-    var nameLabel: LabelView!
-    var countryLabel: LabelView!
+    @IBOutlet weak var countryLabelContainer: UIView!
+    @IBOutlet weak var nameLabelContainer: UIView!
+
+    lazy var nameLabel: LabelView! = .instantiateFromNib(in: nameLabelContainer)
+    lazy var countryLabel: LabelView! = .instantiateFromNib(in: countryLabelContainer)
     
     @IBOutlet weak var mapViewContainer: UIView!
     lazy var mapView: MapView = .instantiateFromNib(in: mapViewContainer)

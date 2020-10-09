@@ -9,24 +9,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="LabelView" id="iN0-l3-epB" customClass="LabelVeiew" customModule="TestProjectApp" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="LabelView" id="iN0-l3-epB" customClass="LabelView" customModule="TestProjectApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BV-xu-FUQ" userLabel="Border View">
-                    <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
+                    <rect key="frame" x="5" y="5" width="140" height="40"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Gc7-pE-4OE">
-                            <rect key="frame" x="5" y="5" width="140" height="40"/>
+                            <rect key="frame" x="5" y="5" width="130" height="30"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Name]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91w-Fg-yPe">
-                                    <rect key="frame" x="0.0" y="0.0" width="67.5" height="40"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Value]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL6-F8-sA2">
-                                    <rect key="frame" x="74.5" y="0.0" width="65.5" height="40"/>
+                                    <rect key="frame" x="70" y="0.0" width="60" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -36,8 +36,12 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Gc7-pE-4OE" secondAttribute="trailing" constant="10" id="6JR-ub-djr"/>
                         <constraint firstAttribute="bottom" secondItem="Gc7-pE-4OE" secondAttribute="bottom" constant="5" id="7N6-G9-dKP"/>
+                        <constraint firstItem="Gc7-pE-4OE" firstAttribute="top" secondItem="4BV-xu-FUQ" secondAttribute="top" constant="10" id="CZ3-GV-AfF"/>
+                        <constraint firstAttribute="bottom" secondItem="Gc7-pE-4OE" secondAttribute="bottom" constant="10" id="O2t-Db-KRN"/>
                         <constraint firstAttribute="trailing" secondItem="Gc7-pE-4OE" secondAttribute="trailing" constant="5" id="Qhe-cB-5Ak"/>
+                        <constraint firstItem="Gc7-pE-4OE" firstAttribute="leading" secondItem="4BV-xu-FUQ" secondAttribute="leading" constant="10" id="W9d-jh-xKU"/>
                         <constraint firstItem="Gc7-pE-4OE" firstAttribute="top" secondItem="4BV-xu-FUQ" secondAttribute="top" constant="5" id="bNa-le-730"/>
                         <constraint firstItem="Gc7-pE-4OE" firstAttribute="leading" secondItem="4BV-xu-FUQ" secondAttribute="leading" constant="5" id="m4Y-yl-i4c"/>
                     </constraints>
@@ -48,20 +52,52 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="5"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="6JR-ub-djr"/>
+                            <exclude reference="7N6-G9-dKP"/>
+                            <exclude reference="CZ3-GV-AfF"/>
+                            <exclude reference="O2t-Db-KRN"/>
+                            <exclude reference="Qhe-cB-5Ak"/>
+                            <exclude reference="W9d-jh-xKU"/>
+                            <exclude reference="bNa-le-730"/>
+                            <exclude reference="m4Y-yl-i4c"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="7N6-G9-dKP"/>
+                            <include reference="Qhe-cB-5Ak"/>
+                            <include reference="bNa-le-730"/>
+                            <include reference="m4Y-yl-i4c"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="6JR-ub-djr"/>
+                            <include reference="CZ3-GV-AfF"/>
+                            <include reference="O2t-Db-KRN"/>
+                            <include reference="W9d-jh-xKU"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="4BV-xu-FUQ" secondAttribute="trailing" id="8bN-O0-WaH"/>
-                <constraint firstItem="4BV-xu-FUQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LyR-2p-M7z"/>
-                <constraint firstItem="4BV-xu-FUQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TJe-Cr-JT1"/>
-                <constraint firstAttribute="bottom" secondItem="4BV-xu-FUQ" secondAttribute="bottom" id="uPh-OI-DRo"/>
+                <constraint firstAttribute="trailing" secondItem="4BV-xu-FUQ" secondAttribute="trailing" constant="5" id="8bN-O0-WaH"/>
+                <constraint firstItem="4BV-xu-FUQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="LyR-2p-M7z"/>
+                <constraint firstItem="4BV-xu-FUQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="TJe-Cr-JT1"/>
+                <constraint firstAttribute="bottom" secondItem="4BV-xu-FUQ" secondAttribute="bottom" constant="5" id="uPh-OI-DRo"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="nameLabel" destination="91w-Fg-yPe" id="q4E-eC-1eS"/>
-                <outlet property="valueLabel" destination="CL6-F8-sA2" id="yiv-mF-0Vx"/>
+                <outlet property="borderView" destination="4BV-xu-FUQ" id="x9M-88-euE"/>
+                <outlet property="nameLabel" destination="91w-Fg-yPe" id="MnL-Jm-Hxm"/>
+                <outlet property="valueLabel" destination="CL6-F8-sA2" id="J8Y-T4-RIc"/>
             </connections>
             <point key="canvasLocation" x="-333" y="135"/>
         </view>

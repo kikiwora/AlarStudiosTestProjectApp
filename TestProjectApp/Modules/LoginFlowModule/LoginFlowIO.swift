@@ -16,7 +16,6 @@ protocol LoginViewType: ViewType {
 }
 
 protocol ContentViewType: ViewType {
-    func authorizationFinished()
     func render(_ viewModel: ElementsListViewController.ViewModel)
     func dataLoadingFailed(_ error: Error)
     func showLoginForm()
@@ -27,9 +26,11 @@ protocol LoginViewOutput: class {
 }
 
 protocol ContentViewOutput: class {
+    func checkUserAuthorization()
+    func isUserAuthorized() -> Bool
+
     func performLogin()
     func performDataLoad(page: Int)
-    func isUserAuthorized() -> Bool
 }
 
 // MARK: - Presenter IO
