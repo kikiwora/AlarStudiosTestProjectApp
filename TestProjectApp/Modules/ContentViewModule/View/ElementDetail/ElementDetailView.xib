@@ -4,23 +4,69 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="ElementDetailView" id="iN0-l3-epB" customClass="ElementDetailView" customModule="TestProjectApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="450" height="150"/>
+            <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bk-Zg-ihJ">
+                    <rect key="frame" x="30" y="30" width="740" height="540"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lot-w6-VKz" userLabel="Content Stack">
+                            <rect key="frame" x="10" y="10" width="720" height="520"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="blA-4q-TBw" userLabel="Title Container">
+                                    <rect key="frame" x="0.0" y="0.0" width="720" height="150"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BfS-4v-Rrd" userLabel="Title Stack">
+                                            <rect key="frame" x="0.0" y="0.0" width="720" height="150"/>
+                                            <variation key="widthClass=compact" axis="vertical"/>
+                                            <variation key="widthClass=regular" axis="horizontal"/>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="BfS-4v-Rrd" firstAttribute="leading" secondItem="blA-4q-TBw" secondAttribute="leading" id="2Nh-7N-DGo"/>
+                                        <constraint firstAttribute="trailing" secondItem="BfS-4v-Rrd" secondAttribute="trailing" id="4sa-XR-4zq"/>
+                                        <constraint firstItem="BfS-4v-Rrd" firstAttribute="top" secondItem="blA-4q-TBw" secondAttribute="top" id="J6w-kY-NFq"/>
+                                        <constraint firstAttribute="bottom" secondItem="BfS-4v-Rrd" secondAttribute="bottom" id="Nqk-4B-Z8R"/>
+                                        <constraint firstAttribute="height" constant="150" id="RlB-V3-hYV"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2w-Ko-OZh">
+                                    <rect key="frame" x="0.0" y="160" width="720" height="360"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Lot-w6-VKz" secondAttribute="bottom" constant="10" id="25N-9D-aOX"/>
+                        <constraint firstItem="Lot-w6-VKz" firstAttribute="top" secondItem="0bk-Zg-ihJ" secondAttribute="top" constant="10" id="MiO-5d-CPP"/>
+                        <constraint firstItem="Lot-w6-VKz" firstAttribute="leading" secondItem="0bk-Zg-ihJ" secondAttribute="leading" constant="10" id="imv-vv-JR1"/>
+                        <constraint firstAttribute="trailing" secondItem="Lot-w6-VKz" secondAttribute="trailing" constant="10" id="xgl-1e-6Bz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="0bk-Zg-ihJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="J3N-5U-tQK"/>
+                <constraint firstAttribute="bottom" secondItem="0bk-Zg-ihJ" secondAttribute="bottom" constant="30" id="Kbz-ue-r23"/>
+                <constraint firstItem="0bk-Zg-ihJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="Tso-ja-mXP"/>
+                <constraint firstAttribute="trailing" secondItem="0bk-Zg-ihJ" secondAttribute="trailing" constant="30" id="vG8-Np-lBx"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-397" y="93"/>
+            <connections>
+                <outlet property="elementDetailContentView" destination="0bk-Zg-ihJ" id="EPX-Qf-2aD"/>
+                <outlet property="mapViewContainer" destination="n2w-Ko-OZh" id="aT9-b0-DMq"/>
+                <outlet property="titleStack" destination="BfS-4v-Rrd" id="tQq-j9-1jq"/>
+            </connections>
+            <point key="canvasLocation" x="-397.10144927536237" y="92.410714285714278"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

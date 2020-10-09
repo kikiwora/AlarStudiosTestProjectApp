@@ -33,6 +33,8 @@
 		1E64A380253052EF00964451 /* ListElementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E64A37F253052EF00964451 /* ListElementView.xib */; };
 		1E64A38A2530554700964451 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E64A3882530554700964451 /* MapView.xib */; };
 		1E64A38B2530554700964451 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64A3892530554700964451 /* MapView.swift */; };
+		1E64A39425305A0100964451 /* LabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E64A39325305A0100964451 /* LabelView.xib */; };
+		1E64A39925305A1300964451 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E64A39825305A1300964451 /* LabelView.swift */; };
 		1E71E1B1252C8242000DA792 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E71E1B0252C8242000DA792 /* LoginResponse.swift */; };
 		1E71E1C1252C845E000DA792 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E71E1C0252C845E000DA792 /* Endpoint.swift */; };
 		1E71E1C9252C848F000DA792 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E71E1C8252C848F000DA792 /* TargetType.swift */; };
@@ -127,6 +129,8 @@
 		1E64A37F253052EF00964451 /* ListElementView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListElementView.xib; sourceTree = "<group>"; };
 		1E64A3882530554700964451 /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		1E64A3892530554700964451 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		1E64A39325305A0100964451 /* LabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelView.xib; sourceTree = "<group>"; };
+		1E64A39825305A1300964451 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		1E71E1B0252C8242000DA792 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		1E71E1C0252C845E000DA792 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1E71E1C8252C848F000DA792 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
@@ -299,6 +303,7 @@
 		1E544EEC252C745300EA0BC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1E64A392253059EA00964451 /* LabelView */,
 				1E544EB9252C72E900EA0BC1 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -407,6 +412,15 @@
 				1E64A3892530554700964451 /* MapView.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		1E64A392253059EA00964451 /* LabelView */ = {
+			isa = PBXGroup;
+			children = (
+				1E64A39325305A0100964451 /* LabelView.xib */,
+				1E64A39825305A1300964451 /* LabelView.swift */,
+			);
+			path = LabelView;
 			sourceTree = "<group>";
 		};
 		1E71E1A5252C7C8D000DA792 /* Services */ = {
@@ -751,6 +765,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E64A38A2530554700964451 /* MapView.xib in Resources */,
+				1E64A39425305A0100964451 /* LabelView.xib in Resources */,
 				1E544EBB252C72E900EA0BC1 /* LaunchScreen.storyboard in Resources */,
 				1E30E53F252E096F003EFA77 /* LoginFormView.xib in Resources */,
 				1E544F08252C766A00EA0BC1 /* Localizable.strings in Resources */,
@@ -904,6 +919,7 @@
 				1E64A324252F83AC00964451 /* ElementsListViewController.swift in Sources */,
 				1E544F07252C766A00EA0BC1 /* Strings.swift in Sources */,
 				1E71E20C252C8CB5000DA792 /* TestProjectAppService.swift in Sources */,
+				1E64A39925305A1300964451 /* LabelView.swift in Sources */,
 				1E71E204252C8C83000DA792 /* UnauthorizedNetworkListener.swift in Sources */,
 				1E71E269252CA3AE000DA792 /* PresentableError.swift in Sources */,
 				1E71E251252C9B06000DA792 /* SessionManager.swift in Sources */,
