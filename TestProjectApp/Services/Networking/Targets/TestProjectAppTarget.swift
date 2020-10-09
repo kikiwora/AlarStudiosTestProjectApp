@@ -15,26 +15,26 @@ enum TestProjectAppTarget {
 extension TestProjectAppTarget: TargetType {
     var path: String {
         switch self {
-            case .login:
-                return "test/auth.cgi"
-            case .data:
-                return "test/data.cgi"
+        case .login:
+            return "test/auth.cgi"
+        case .data:
+            return "test/data.cgi"
         }
     }
-
+    
     var method: HTTPMethod {
         switch self {
-            case .login,
-                 .data:
-                return .get
+        case .login,
+             .data:
+            return .get
         }
     }
-
+    
     var parameters: [String: Any]? {
         switch self {
-            case .login (let parameters),
-                 .data(let parameters):
-                return parameters
+        case .login (let parameters),
+             .data(let parameters):
+            return parameters
         }
     }
 }

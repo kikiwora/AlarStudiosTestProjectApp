@@ -1,14 +1,6 @@
 disabled_rules: # rule identifiers to exclude from running
   - trailing_whitespace
   - nesting
-  - trailing_comma
-  - mark
-  - large_tuple
-  - private_over_fileprivate
-  # SourceKit bug hotfix (otherwise swiftlint 0.35.0 or lover will crash on Xcode 11)
-  - no_space_in_method_call
-  - trailing_closure
-  - reduce_into
 opt_in_rules: # some rules are only opt-in
   - closing_brace
   - colon
@@ -45,6 +37,7 @@ excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Pods
   - TestProjectApp/Resources/Storyboards.swift
   - TestProjectApp/Resources/Strings.swift
+  - .swiftlint.yml
 
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level

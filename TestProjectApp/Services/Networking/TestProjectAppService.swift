@@ -26,9 +26,7 @@ protocol TestProjectAppNetworkServiceType {
 
 extension TestProjectAppService {
     var sessionManager: SessionManager {
-        get {
-            return networkProvider.sessionManager
-        }
+        return networkProvider.sessionManager
     }
 }
 

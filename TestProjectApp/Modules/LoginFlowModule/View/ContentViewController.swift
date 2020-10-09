@@ -15,7 +15,11 @@ class ContentViewController: UIViewController {
         return presenter
     }()
 
-    weak var contentView: UIViewController?
+    lazy var contentView: UIViewController = {
+        let contentView = Storyboard.ContentView.initialScene.instantiate()
+        self.addChild(contentView)
+        return contentView
+    }()
 
     @IBAction func unwindToContentView(segue: UIStoryboardSegue) { }
 
@@ -29,11 +33,9 @@ class ContentViewController: UIViewController {
         checkUserAuthorization()
     }
 
-    private func loadContentView() {
-        let contentView = Storyboard.ContentView.initialScene.instantiate()
-        self.contentView = contentView
-        self.addChild(contentView)
-        presenter.performDataLoad(page: 1)
+    private func loadDataForContentView() {
+        // TODO: Implement data loading here
+//        presenter.performDataLoad(page: 1)
     }
 }
 
@@ -45,7 +47,7 @@ extension ContentViewController: ContentViewType {
     }
 
     func render(_ viewModel: ElementsListViewController.ViewModel) {
-        // TODO
+        // TODO: Implement render calls here
     }
 
     func dataLoadingFailed(_ error: Error) {
@@ -82,7 +84,7 @@ extension ContentViewController {
             return
         }
 
-        loadContentView()
+        loadDataForContentView()
     }
 }
 

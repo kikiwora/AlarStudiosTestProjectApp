@@ -11,7 +11,7 @@ final class SessionManager {
     private static let codeKey = "code"
 
     private(set) var code: String?  // Needed to avoid frequent disk reads
-    var _code: String? {
+    private var storedCode: String? {
         get {
             do {
                 return try Storage.SharedStorage.get(SessionManager.codeKey) as? String
@@ -25,7 +25,7 @@ final class SessionManager {
     }
 
     init() {
-        code = _code
+        code = storedCode
     }
 
     func clearSession() {
@@ -35,7 +35,7 @@ final class SessionManager {
 
     func saveSession(with code: String) {
         self.code = code
-        _code = code
+        storedCode = code
     }
 
     func isUserAuthorized() -> Bool {

@@ -810,7 +810,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    git diff --name-only --diff-filter=d | egrep '\\.swift' | while read filename; do\n        swiftlint autocorrect --path \"$filename\"\n    done\n    \n    git diff --cached --name-only --diff-filter=d | egrep '\\.swift' | while read filename; do \n        swiftlint autocorrect --path \"$filename\"\n    done\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n    # Linting for all issues\n    swiftlint\n    \n    # Autocorrection for your changes\n    git diff --name-only --diff-filter=d | egrep '\\.swift' | while read filename; do\n        swiftlint autocorrect --path \"$filename\"\n    done\n    \n    git diff --cached --name-only --diff-filter=d | egrep '\\.swift' | while read filename; do\n        swiftlint autocorrect --path \"$filename\"\n    done\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		1E544F00252C75C800EA0BC1 /* Codegen */ = {
 			isa = PBXShellScriptBuildPhase;

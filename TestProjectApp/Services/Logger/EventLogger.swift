@@ -16,7 +16,7 @@ enum EventLogger<T> where T: LosslessStringConvertible {
         if #available(iOS 14.0, *) {
             os_log("\(data)")
         } else {
-            // TODO
+            // TODO: Impelemnt logs support for iOS 12 here
         }
         #endif
     }
