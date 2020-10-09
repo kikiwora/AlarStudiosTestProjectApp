@@ -12,6 +12,7 @@
 "error.generic-title"="An unknown error occured";
 "error.generic-message"="Something went wrong";
 "error.generic-retry-message"="Something went wrong, please retry";
+"error.generic-retry-action"="Try Again";
 
 "error.incorrect-response-title"="Incorrect Server Response";
 "error.incorrect-respinse-message"="Server returned something weird, not an expected data";
@@ -20,3 +21,6 @@
 "error.login-denied-message"="It seems like username or password you provided is incorrect";
 
 "warning.search.no-results-found"="No results has been found";
+
+"elementDetail.label.name"="Name:";
+"elementDetail.label.country"="Country:";

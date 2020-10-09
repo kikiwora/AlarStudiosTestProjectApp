@@ -54,7 +54,7 @@ extension ContentViewController: ContentViewType {
                                                     message: presentableError.localizedMessage,
                                                     preferredStyle: .alert)
 
-            let defaultAction = UIAlertAction(title: "Try Again", style: .default, handler: dataReloadHandler)
+            let defaultAction = UIAlertAction(title: L10n.Error.genericRetryMessage, style: .default, handler: dataReloadHandler)
 
             alertController.addAction(defaultAction)
             UIApplication.appDelegate?.window?.present(alertController)

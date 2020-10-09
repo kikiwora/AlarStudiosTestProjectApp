@@ -12,9 +12,20 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
 
+  internal enum ElementDetail {
+    internal enum Label {
+      /// Country:
+      internal static let country = L10n.tr("Localizable", "elementDetail.label.country")
+      /// Name:
+      internal static let name = L10n.tr("Localizable", "elementDetail.label.name")
+    }
+  }
+
   internal enum Error {
     /// Something went wrong
     internal static let genericMessage = L10n.tr("Localizable", "error.generic-message")
+    /// Try Again
+    internal static let genericRetryAction = L10n.tr("Localizable", "error.generic-retry-action")
     /// Something went wrong, please retry
     internal static let genericRetryMessage = L10n.tr("Localizable", "error.generic-retry-message")
     /// An unknown error occured

@@ -31,8 +31,8 @@ class ElementDetailView: UIView {
         let mapViewModel = MapView.ViewModel.Factory.make(from: viewModel)
 
         mapView.render(mapViewModel)
-        nameLabel.render(value: viewModel.name)
-        countryLabel.render(value: viewModel.country)
+        nameLabel.render(name: L10n.ElementDetail.Label.name, value: viewModel.name)
+        countryLabel.render(name: L10n.ElementDetail.Label.country, value: viewModel.country)
     }
 }
 
