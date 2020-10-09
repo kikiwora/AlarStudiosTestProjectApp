@@ -18,6 +18,22 @@ class LoginFlowPresenter: LoginFlowPresenterType {
     weak var contentView: ContentViewType!
 }
 
+// MARK: - Session-related Methods
+
+private extension LoginFlowPresenter {
+    func setupSessionObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(sessionTokenFailed), name: .userActionUnauthorized, object: nil)
+    }
+
+    func removeSessionObserver() {
+        NotificationCenter.default.removeObserver(self, name: .userActionUnauthorized, object: nil)
+    }
+
+    @objc func sessionTokenFailed() {
+        performLogin()
+    }
+}
+
 // MARK: - Login Methods
 
 extension LoginFlowPresenter {
@@ -97,6 +113,13 @@ extension LoginFlowPresenter: LoginViewOutput {
 // MARK: - Methods for Content View
 
 extension LoginFlowPresenter: ContentViewOutput {
+    func viewDidAppear() {
+        setupSessionObserver()
+    }
+    
+    func viewDidDisappear() {
+        removeSessionObserver()
+    }
 
     func isUserAuthorized() -> Bool {
         return interactor.isUserAuthorized()

@@ -31,6 +31,9 @@ protocol ContentViewOutput: class {
 
     func performLogin()
     func performDataLoad(page: Int)
+
+    func viewDidAppear()
+    func viewDidDisappear()
 }
 
 // MARK: - Presenter IO
