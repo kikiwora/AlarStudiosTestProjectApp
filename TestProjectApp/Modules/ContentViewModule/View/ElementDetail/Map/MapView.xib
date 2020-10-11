@@ -25,6 +25,11 @@
                 <constraint firstAttribute="bottom" secondItem="vts-Mw-V00" secondAttribute="bottom" id="jPL-z4-vb8"/>
                 <constraint firstItem="vts-Mw-V00" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="spL-40-akV"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="mapView" destination="vts-Mw-V00" id="uUR-JB-yey"/>
             </connections>
