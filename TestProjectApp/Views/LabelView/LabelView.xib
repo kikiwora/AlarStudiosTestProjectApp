@@ -9,23 +9,23 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="LabelView" id="iN0-l3-epB" customClass="LabelView" customModule="TestProjectApp" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="LabelView" id="iN0-l3-epB" userLabel="Label View" customClass="LabelView" customModule="TestProjectApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BV-xu-FUQ" userLabel="Border View">
                     <rect key="frame" x="5" y="5" width="140" height="40"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Gc7-pE-4OE">
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Gc7-pE-4OE" userLabel="Name-Value Label Stack">
                             <rect key="frame" x="5" y="5" width="130" height="30"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Name]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91w-Fg-yPe">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Name]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91w-Fg-yPe" userLabel="Name Label">
                                     <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Value]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL6-F8-sA2">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Value]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CL6-F8-sA2" userLabel="Value Label">
                                     <rect key="frame" x="70" y="0.0" width="60" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
@@ -36,14 +36,14 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Gc7-pE-4OE" secondAttribute="trailing" constant="10" id="6JR-ub-djr"/>
-                        <constraint firstAttribute="bottom" secondItem="Gc7-pE-4OE" secondAttribute="bottom" constant="5" id="7N6-G9-dKP"/>
-                        <constraint firstItem="Gc7-pE-4OE" firstAttribute="top" secondItem="4BV-xu-FUQ" secondAttribute="top" constant="10" id="CZ3-GV-AfF"/>
-                        <constraint firstAttribute="bottom" secondItem="Gc7-pE-4OE" secondAttribute="bottom" constant="10" id="O2t-Db-KRN"/>
-                        <constraint firstAttribute="trailing" secondItem="Gc7-pE-4OE" secondAttribute="trailing" constant="5" id="Qhe-cB-5Ak"/>
-                        <constraint firstItem="Gc7-pE-4OE" firstAttribute="leading" secondItem="4BV-xu-FUQ" secondAttribute="leading" constant="10" id="W9d-jh-xKU"/>
-                        <constraint firstItem="Gc7-pE-4OE" firstAttribute="top" secondItem="4BV-xu-FUQ" secondAttribute="top" constant="5" id="bNa-le-730"/>
-                        <constraint firstItem="Gc7-pE-4OE" firstAttribute="leading" secondItem="4BV-xu-FUQ" secondAttribute="leading" constant="5" id="m4Y-yl-i4c"/>
+                        <constraint firstAttribute="trailing" secondItem="Gc7-pE-4OE" secondAttribute="trailing" constant="10" id="6JR-ub-djr" userLabel="Border View Padding Right Regular"/>
+                        <constraint firstAttribute="bottom" secondItem="Gc7-pE-4OE" secondAttribute="bottom" constant="5" id="7N6-G9-dKP" userLabel="Border View Padding Bottom Compact "/>
+                        <constraint firstItem="Gc7-pE-4OE" firstAttribute="top" secondItem="4BV-xu-FUQ" secondAttribute="top" constant="10" id="CZ3-GV-AfF" userLabel="Border View Padding Top Regular"/>
+                        <constraint firstAttribute="bottom" secondItem="Gc7-pE-4OE" secondAttribute="bottom" constant="10" id="O2t-Db-KRN" userLabel="Border View Padding Bottom Regular"/>
+                        <constraint firstAttribute="trailing" secondItem="Gc7-pE-4OE" secondAttribute="trailing" constant="5" id="Qhe-cB-5Ak" userLabel="Border View Padding Right Compact"/>
+                        <constraint firstItem="Gc7-pE-4OE" firstAttribute="leading" secondItem="4BV-xu-FUQ" secondAttribute="leading" constant="10" id="W9d-jh-xKU" userLabel="Border View Padding Left Regular"/>
+                        <constraint firstItem="Gc7-pE-4OE" firstAttribute="top" secondItem="4BV-xu-FUQ" secondAttribute="top" constant="5" id="bNa-le-730" userLabel="Border View Padding Top Compact"/>
+                        <constraint firstItem="Gc7-pE-4OE" firstAttribute="leading" secondItem="4BV-xu-FUQ" secondAttribute="leading" constant="5" id="m4Y-yl-i4c" userLabel="Border View Padding Left Compact"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -88,10 +88,10 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="4BV-xu-FUQ" secondAttribute="trailing" constant="5" id="8bN-O0-WaH"/>
-                <constraint firstItem="4BV-xu-FUQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="LyR-2p-M7z"/>
-                <constraint firstItem="4BV-xu-FUQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="TJe-Cr-JT1"/>
-                <constraint firstAttribute="bottom" secondItem="4BV-xu-FUQ" secondAttribute="bottom" constant="5" id="uPh-OI-DRo"/>
+                <constraint firstAttribute="trailing" secondItem="4BV-xu-FUQ" secondAttribute="trailing" constant="5" id="8bN-O0-WaH" userLabel="Label View Padding Right"/>
+                <constraint firstItem="4BV-xu-FUQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="LyR-2p-M7z" userLabel="Label View Padding Top"/>
+                <constraint firstItem="4BV-xu-FUQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="TJe-Cr-JT1" userLabel="Label View Padding Left"/>
+                <constraint firstAttribute="bottom" secondItem="4BV-xu-FUQ" secondAttribute="bottom" constant="5" id="uPh-OI-DRo" userLabel="Label View Padding Bottom"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
