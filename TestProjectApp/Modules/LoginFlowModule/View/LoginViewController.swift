@@ -30,18 +30,31 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLoginCallback()
-        setupKeyboardEvents()
+        setupKeyboardDismiss()
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         loginFormView.viewDidLayoutSubviews()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        setupKeyboardEvents()
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        removeKeyboardEvents()
+    }
 }
 
 // MARK: - Keyboard management methods
 
 private extension LoginViewController {
+
+    func setupKeyboardDismiss() {
+        hideKeyboardWhenTappedAround()
+        loginFormView.onKeyboardDismiss = { [weak self] in self?.dismissKeyboard() }
+    }
 
     func setupKeyboardEvents() {
         NotificationCenter.default.addObserver(self,
@@ -52,9 +65,11 @@ private extension LoginViewController {
                                                selector: #selector(keyboardWillHide),
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
+    }
 
-        hideKeyboardWhenTappedAround()
-        loginFormView.onKeyboardDismiss = { [weak self] in self?.dismissKeyboard() }
+    func removeKeyboardEvents() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     func adjustInsetForKeyboardShow(_ show: Bool, notification: NSNotification) {

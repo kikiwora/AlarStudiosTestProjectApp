@@ -8,5 +8,6 @@
 import UIKit
 
 class ElementDetailViewController: UIViewController {
-    
+    //        let testDetailView = ElementDetailView.instantiateFromNib(in: self.view)
+    //        testDetailView.render((viewModel.elementViewModels?.first)!)
 }

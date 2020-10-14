@@ -15,11 +15,11 @@ class ContentViewController: UIViewController {
         return presenter
     }()
 
-    lazy var contentView: UIViewController = {
-        // TODO: This may not work. Untested. Maybe it's not even necessary
-        let contentView = Storyboard.ContentView.initialScene.instantiate()
+    lazy var contentSplitViewController: UISplitViewController = {
+        let contentView = Storyboard.ContentView.initialScene.instantiate() as UISplitViewController
         self.view.addSubview(contentView.view)
         contentView.view.pinToSafeArea(self.view)
+        contentView.delegate = self
         return contentView
     }()
 
@@ -29,6 +29,8 @@ class ContentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        contentSplitViewController.awakeFromNib()
+        // TODO: Setup connection to ElementsListViewController here
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -36,14 +38,18 @@ class ContentViewController: UIViewController {
     }
 }
 
+// MARK: - Split View Controller Delegate
+
+extension ContentViewController: UISplitViewControllerDelegate {
+
+}
+
 // MARK: - User Authorization Flow
 
 extension ContentViewController: ContentViewType {
 
     func render(_ viewModel: ElementsListViewController.ViewModel) {
-        // TODO: Implement render calls here
-        let testDetailView = ElementDetailView.instantiateFromNib(in: self.view)
-        testDetailView.render((viewModel.elementViewModels?.first)!)
+
     }
 
     func dataLoadingFailed(_ error: Error) {
