@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct DataResponse: StatusRepresentable, Decodable {
+struct DataResponse: StatusRepresentable, DataListRepresentable, Decodable {
     private(set) var status: RequestStatus
     
-    let page: Int?
-    let data: [DataElement]?
+    let page: Int
+    let data: [DataElement]
 }
 
 struct DataElement: Decodable {
@@ -20,4 +20,10 @@ struct DataElement: Decodable {
     let country: String?
     let lat: Double?
     let lon: Double?
+}
+
+extension DataElement: Equatable {
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

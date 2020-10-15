@@ -8,7 +8,10 @@
 import UIKit
 
 class ElementsListViewController: UITableViewController {
+    
+    func render(_ viewModel: ViewModel) {
 
+    }
 }
 
 // MARK: - ViewModel
@@ -24,7 +27,7 @@ extension ElementsListViewController {
 extension ElementsListViewController.ViewModel {
     enum Factory {
         static func make(from dataResponse: DataResponse) -> ElementsListViewController.ViewModel {
-            let elementViewModels = dataResponse.data?.map({ ElementDetailView.ViewModel.Factory.make(from: $0) })
+            let elementViewModels = dataResponse.data.map({ ElementDetailView.ViewModel.Factory.make(from: $0) })
             return ElementsListViewController.ViewModel(page: dataResponse.page,
                                                         elementViewModels: elementViewModels)
         }
